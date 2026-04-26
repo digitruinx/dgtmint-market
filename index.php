@@ -92,7 +92,7 @@ require_once __DIR__ . '/_inc/header.php';
              onclick="openProduct('<?= $p['id'] ?>')"
              data-id="<?= $p['id'] ?>">
           <div class="card__preview" style="background:<?= $p['bg'] ?>;">
-            <div class="card__icon"><?= $p['icon'] ?></div>
+            <?= get_mockup_html($p) ?>
             <div class="card__badges">
               <span class="badge <?= $p['badge_cls'] ?>"><?= htmlspecialchars($p['badge']) ?></span>
               <?php if ($is_hot): ?><span class="badge badge--hot">Hot</span><?php endif; ?>

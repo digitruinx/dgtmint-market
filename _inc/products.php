@@ -367,6 +367,144 @@ function get_product(string $id): ?array {
     return null;
 }
 
+function get_mockup_html(array $p): string {
+    $cat  = $p['cat'];
+    $icon = $p['icon'];
+    $bg   = $p['bg'];
+
+    if (in_array($cat, ['wp','custom'])) {
+        // Browser-window mockup
+        $accent = $cat === 'wp' ? '#4f8ef7' : '#a855f7';
+        return <<<HTML
+<div class="mockup mockup--browser" style="background:$bg;">
+  <div class="mockup__bar">
+    <div class="mockup__dot mockup__dot--r"></div>
+    <div class="mockup__dot mockup__dot--y"></div>
+    <div class="mockup__dot mockup__dot--g"></div>
+    <div class="mockup__url"></div>
+  </div>
+  <div class="mockup__body">
+    <div class="mockup__hero" style="background:linear-gradient(90deg,{$accent}44,{$accent}22);display:flex;align-items:center;padding:0 8px;gap:6px;">
+      <span style="font-size:1.1rem;">$icon</span>
+      <div style="flex:1;">
+        <div class="mockup__line mockup__line--med" style="background:{$accent}33;margin-bottom:4px;"></div>
+        <div class="mockup__line mockup__line--short" style="background:{$accent}22;"></div>
+      </div>
+      <div style="width:40px;height:14px;background:{$accent};border-radius:3px;opacity:0.8;"></div>
+    </div>
+    <div class="mockup__grid2">
+      <div class="mockup__card-sm"></div><div class="mockup__card-sm"></div>
+      <div class="mockup__card-sm"></div><div class="mockup__card-sm"></div>
+    </div>
+    <div class="mockup__line mockup__line--med" style="margin-top:4px;"></div>
+    <div class="mockup__line mockup__line--short"></div>
+  </div>
+</div>
+HTML;
+    }
+
+    if (in_array($cat, ['ai','workflow','training'])) {
+        return <<<HTML
+<div class="mockup mockup--browser mockup--terminal" style="width:88%;height:80%;border-radius:8px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.5);">
+  <div class="mockup__bar" style="background:#0a0010;">
+    <div class="mockup__dot mockup__dot--r"></div>
+    <div class="mockup__dot mockup__dot--y"></div>
+    <div class="mockup__dot mockup__dot--g"></div>
+    <span style="font-size:0.6rem;color:#a855f7;margin-left:6px;">DGT Agent</span>
+  </div>
+  <div style="padding:10px;flex:1;overflow:hidden;background:#0a0010;">
+    <div class="term-line term-line--prompt">▶ agent.run("$icon {$p['name']}")</div>
+    <div class="term-line term-line--out">Initialising Claude Opus…</div>
+    <div class="term-line term-line--ok">✓ Context loaded</div>
+    <div class="term-line term-line--out">Processing request…</div>
+    <div class="term-line term-line--gold">★ {$p['pro_features'][0]}</div>
+    <div class="term-line term-line--ok">✓ Output ready</div>
+  </div>
+</div>
+HTML;
+    }
+
+    if ($cat === 'motion') {
+        return <<<HTML
+<div class="mockup mockup--video" style="width:88%;height:80%;border-radius:8px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.5);background:{$bg};">
+  <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;">
+    <span style="font-size:2.5rem;">$icon</span>
+    <div style="display:flex;gap:3px;align-items:center;">
+      <div style="width:3px;height:16px;background:#1dd1a1;border-radius:2px;animation:eq 0.8s ease infinite alternate;"></div>
+      <div style="width:3px;height:24px;background:#1dd1a1;border-radius:2px;animation:eq 0.6s ease infinite alternate 0.1s;"></div>
+      <div style="width:3px;height:12px;background:#1dd1a1;border-radius:2px;animation:eq 0.9s ease infinite alternate 0.2s;"></div>
+      <div style="width:3px;height:20px;background:#1dd1a1;border-radius:2px;animation:eq 0.7s ease infinite alternate 0.3s;"></div>
+      <div style="width:3px;height:14px;background:#1dd1a1;border-radius:2px;animation:eq 0.85s ease infinite alternate 0.4s;"></div>
+    </div>
+  </div>
+  <div class="mockup__filmstrip">
+    <div class="mockup__frame"></div><div class="mockup__frame"></div><div class="mockup__frame"></div>
+    <div class="mockup__frame"></div><div class="mockup__frame"></div><div class="mockup__frame"></div>
+    <div class="mockup__frame"></div><div class="mockup__frame"></div>
+  </div>
+</div>
+<style>@keyframes eq{from{transform:scaleY(0.5)}to{transform:scaleY(1)}}</style>
+HTML;
+    }
+
+    if ($cat === 'mcq') {
+        $feats = array_slice($p['free_features'] + $p['pro_features'], 0, 3);
+        return <<<HTML
+<div class="mockup mockup--doc" style="width:88%;height:80%;border-radius:8px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.5);">
+  <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;">
+    <span style="font-size:1.3rem;">$icon</span>
+    <span style="font-size:0.65rem;font-weight:700;color:#e2e8f0;">{$p['name']}</span>
+  </div>
+  <div class="doc-q">Q. Which article of the Indian Constitution deals with…</div>
+  <div style="display:flex;flex-direction:column;gap:3px;margin-bottom:6px;">
+    <div style="background:rgba(34,197,94,0.15);border:1px solid rgba(34,197,94,0.3);border-radius:3px;padding:3px 7px;font-size:0.57rem;color:#86efac;">✓ A) Article 32 — Right to Constitutional Remedies</div>
+    <div style="background:rgba(255,255,255,0.04);border-radius:3px;padding:3px 7px;font-size:0.57rem;color:#64748b;">B) Article 19</div>
+    <div style="background:rgba(255,255,255,0.04);border-radius:3px;padding:3px 7px;font-size:0.57rem;color:#64748b;">C) Article 21</div>
+  </div>
+  <div style="display:flex;gap:4px;flex-wrap:wrap;">
+    <span class="doc-tag">{$p['price_pro']} MCQs</span>
+    <span class="doc-tag">Solutions</span>
+    <span class="doc-tag">PDF</span>
+  </div>
+</div>
+HTML;
+    }
+
+    if ($cat === 'lms') {
+        return <<<HTML
+<div class="mockup mockup--browser" style="background:#0d1b2e;width:88%;height:80%;border-radius:8px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.5);">
+  <div class="mockup__bar">
+    <div class="mockup__dot mockup__dot--r"></div>
+    <div class="mockup__dot mockup__dot--y"></div>
+    <div class="mockup__dot mockup__dot--g"></div>
+    <span style="font-size:0.58rem;color:#ec4899;margin-left:6px;">LMS · Course Player</span>
+  </div>
+  <div style="padding:8px;flex:1;">
+    <div style="display:flex;gap:6px;margin-bottom:6px;align-items:center;">
+      <span style="font-size:1.4rem;">$icon</span>
+      <div>
+        <div class="mockup__line mockup__line--med" style="height:8px;background:rgba(236,72,153,0.3);margin-bottom:3px;"></div>
+        <div class="mockup__line mockup__line--short" style="height:5px;"></div>
+      </div>
+    </div>
+    <div style="background:rgba(236,72,153,0.08);border:1px solid rgba(236,72,153,0.15);border-radius:4px;padding:5px 7px;margin-bottom:5px;">
+      <div style="font-size:0.55rem;color:#f9a8d4;font-weight:600;">▶ Module 1 — Introduction</div>
+    </div>
+    <div style="display:flex;gap:3px;align-items:center;margin-bottom:4px;">
+      <div style="flex:1;height:4px;background:rgba(236,72,153,0.2);border-radius:2px;"><div style="width:35%;height:100%;background:#ec4899;border-radius:2px;"></div></div>
+      <span style="font-size:0.52rem;color:#94a3b8;">35%</span>
+    </div>
+    <div class="mockup__line mockup__line--med" style="margin-bottom:3px;"></div>
+    <div class="mockup__line mockup__line--short"></div>
+  </div>
+</div>
+HTML;
+    }
+
+    // Fallback
+    return "<div class='card__icon'>$icon</div>";
+}
+
 function fmt_price(int $paise_or_rupee): string {
     // products store in rupees directly
     return '₹' . number_format($paise_or_rupee);
