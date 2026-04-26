@@ -1,0 +1,35 @@
+Options -Indexes
+ServerSignature Off
+
+# Block direct access to _inc
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^_inc/ - [F,L]
+  RewriteRule ^\.env - [F,L]
+</IfModule>
+
+# Security headers
+<IfModule mod_headers.c>
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  Header always set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# PHP settings
+<IfModule mod_php.c>
+  php_flag display_errors Off
+  php_flag log_errors On
+  php_value session.cookie_httponly 1
+  php_value session.use_strict_mode 1
+</IfModule>
+
+# Cache static assets
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css              "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType image/png             "access plus 30 days"
+  ExpiresByType image/jpeg            "access plus 30 days"
+</IfModule>
