@@ -4,311 +4,214 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DGT Mint Market — Digital Products by Digitruinx</title>
-  <meta name="description" content="India's digital product marketplace by Digitruinx. Themes, plugins, AI agents, motion graphics, MCQ bundles, LMS access, workflows and more. Start free." />
+  <meta name="description" content="India's digital product marketplace by Digitruinx. Fonts, LUTs, music, AI agents, web templates, motion graphics, MCQ bundles and more." />
   <link rel="canonical" href="https://market.dgtmint.com/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --navy:         #1a3a4a;
-      --navy-dark:    #0d1b2e;
-      --navy-deeper:  #091525;
-      --mint:         #1dd1a1;
-      --mint-hover:   #17b88e;
-      --gold:         #b8973a;
-      --gold-hover:   #a07f2e;
-      --dark-bg:      #0a0f1e;
-      --cyan:         #00bcd4;
-      --purple:       #a855f7;
-      --pink:         #ec4899;
-      --orange:       #f97316;
-      --danger:       #ef4444;
-      --success:      #22c55e;
-      --warning:      #f59e0b;
-      --text:         #e2e8f0;
-      --text-muted:   #94a3b8;
-      --text-dim:     #64748b;
-      --text-faint:   #475569;
-      --border:       #1e3a4a;
-      --border-light: #253d4e;
-      --surface:      #0d1b2e;
-      --surface-2:    #111f30;
-      --surface-3:    #162435;
-      --surface-hover:#192840;
-      --font-sans:    'Inter', 'Helvetica Neue', Arial, sans-serif;
-      --radius:       12px;
-      --radius-lg:    20px;
-      --transition:   0.2s ease;
+      --navy:#1a3a4a; --navy-dark:#0d1b2e; --navy-deeper:#091525;
+      --mint:#1dd1a1; --mint-hover:#17b88e;
+      --gold:#b8973a; --gold-hover:#a07f2e;
+      --dark-bg:#0a0f1e; --cyan:#00bcd4; --purple:#a855f7;
+      --pink:#ec4899; --orange:#f97316;
+      --danger:#ef4444; --success:#22c55e; --warning:#f59e0b;
+      --text:#e2e8f0; --text-muted:#94a3b8; --text-dim:#64748b; --text-faint:#475569;
+      --border:#1e3a4a; --border-light:#253d4e;
+      --surface:#0d1b2e; --surface-2:#111f30; --surface-3:#162435; --surface-hover:#192840;
+      --font-sans:'Inter','Helvetica Neue',Arial,sans-serif;
+      --radius:12px; --radius-lg:20px; --transition:0.2s ease;
     }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:var(--font-sans);background:var(--dark-bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;}
+    a{color:var(--mint);text-decoration:none;}
+    a:hover{color:var(--mint-hover);}
+    .container{max-width:1280px;margin:0 auto;padding:0 24px;}
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: var(--font-sans);
-      background-color: var(--dark-bg);
-      color: var(--text);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { color: var(--mint); text-decoration: none; }
-    a:hover { color: var(--mint-hover); }
+    /* Badges */
+    .badge{display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:999px;font-size:0.7rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;}
+    .badge--free  {background:rgba(29,209,161,0.12);color:var(--mint);border:1px solid rgba(29,209,161,0.3);}
+    .badge--pro   {background:rgba(184,151,58,0.12);color:var(--gold);border:1px solid rgba(184,151,58,0.3);}
+    .badge--new   {background:rgba(0,188,212,0.12);color:var(--cyan);border:1px solid rgba(0,188,212,0.3);}
+    .badge--hot   {background:rgba(239,68,68,0.12);color:#f87171;border:1px solid rgba(239,68,68,0.3);}
+    .badge--ai    {background:rgba(168,85,247,0.12);color:var(--purple);border:1px solid rgba(168,85,247,0.3);}
+    .badge--motion{background:rgba(249,115,22,0.12);color:var(--orange);border:1px solid rgba(249,115,22,0.3);}
+    .badge--mcq   {background:rgba(34,197,94,0.12);color:var(--success);border:1px solid rgba(34,197,94,0.3);}
+    .badge--lms   {background:rgba(236,72,153,0.12);color:var(--pink);border:1px solid rgba(236,72,153,0.3);}
+    .badge--wp    {background:rgba(79,142,247,0.12);color:#4f8ef7;border:1px solid rgba(79,142,247,0.3);}
+    .badge--font  {background:rgba(251,191,36,0.12);color:#fbbf24;border:1px solid rgba(251,191,36,0.3);}
+    .badge--lut   {background:rgba(20,184,166,0.12);color:#14b8a6;border:1px solid rgba(20,184,166,0.3);}
+    .badge--music {background:rgba(244,114,182,0.12);color:#f472b6;border:1px solid rgba(244,114,182,0.3);}
+    .badge--web   {background:rgba(99,179,237,0.12);color:#63b3ed;border:1px solid rgba(99,179,237,0.3);}
+    .badge--edu   {background:rgba(154,230,180,0.12);color:#9ae6b4;border:1px solid rgba(154,230,180,0.3);}
 
-    .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
-
-    .badge {
-      display: inline-flex; align-items: center; gap: 5px;
-      padding: 3px 10px; border-radius: 999px;
-      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
-    }
-    .badge--free   { background: rgba(29,209,161,0.12); color: var(--mint);   border: 1px solid rgba(29,209,161,0.3); }
-    .badge--pro    { background: rgba(184,151,58,0.12);  color: var(--gold);   border: 1px solid rgba(184,151,58,0.3); }
-    .badge--new    { background: rgba(0,188,212,0.12);   color: var(--cyan);   border: 1px solid rgba(0,188,212,0.3); }
-    .badge--hot    { background: rgba(239,68,68,0.12);   color: #f87171;       border: 1px solid rgba(239,68,68,0.3); }
-    .badge--ai     { background: rgba(168,85,247,0.12);  color: var(--purple); border: 1px solid rgba(168,85,247,0.3); }
-    .badge--motion { background: rgba(249,115,22,0.12);  color: var(--orange); border: 1px solid rgba(249,115,22,0.3); }
-    .badge--mcq    { background: rgba(34,197,94,0.12);   color: var(--success);border: 1px solid rgba(34,197,94,0.3); }
-    .badge--lms    { background: rgba(236,72,153,0.12);  color: var(--pink);   border: 1px solid rgba(236,72,153,0.3); }
-    .badge--wp     { background: rgba(79,142,247,0.12);  color: #4f8ef7;       border: 1px solid rgba(79,142,247,0.3); }
-
-    .btn {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 12px 24px; border-radius: var(--radius);
-      font-size: 0.9rem; font-weight: 600; cursor: pointer;
-      border: none; transition: all var(--transition); text-decoration: none;
-    }
-    .btn--primary { background: var(--mint); color: #000; }
-    .btn--primary:hover { background: var(--mint-hover); color: #000; transform: translateY(-1px); }
-    .btn--gold    { background: var(--gold); color: #000; }
-    .btn--gold:hover { background: var(--gold-hover); color: #000; transform: translateY(-1px); }
-    .btn--outline { background: transparent; color: var(--mint); border: 1.5px solid var(--mint); }
-    .btn--outline:hover { background: rgba(29,209,161,0.08); color: var(--mint); }
-    .btn--sm   { padding: 8px 16px; font-size: 0.82rem; }
-    .btn--full { width: 100%; justify-content: center; }
-
-    .check { color: var(--success); }
-    .cross  { color: var(--text-faint); }
-    .lock   { color: var(--gold); }
+    /* Buttons */
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:var(--radius);font-size:0.9rem;font-weight:600;cursor:pointer;border:none;transition:all var(--transition);text-decoration:none;}
+    .btn--primary{background:var(--mint);color:#000;}
+    .btn--primary:hover{background:var(--mint-hover);color:#000;transform:translateY(-1px);}
+    .btn--gold{background:var(--gold);color:#000;}
+    .btn--gold:hover{background:var(--gold-hover);color:#000;transform:translateY(-1px);}
+    .btn--outline{background:transparent;color:var(--mint);border:1.5px solid var(--mint);}
+    .btn--outline:hover{background:rgba(29,209,161,0.08);color:var(--mint);}
+    .btn--ghost{background:transparent;color:var(--text-muted);border:1.5px solid var(--border);}
+    .btn--ghost:hover{border-color:var(--mint);color:var(--mint);}
+    .btn--sm{padding:8px 16px;font-size:0.82rem;}
+    .btn--full{width:100%;justify-content:center;}
+    .check{color:var(--success);} .cross{color:var(--text-faint);} .lock{color:var(--gold);}
 
     /* Navbar */
-    .nav {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(10,15,30,0.95); backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav__inner {
-      display: flex; align-items: center; justify-content: space-between;
-      height: 64px; gap: 24px;
-    }
-    .nav__brand {
-      display: flex; align-items: center; gap: 10px;
-      font-size: 1.1rem; font-weight: 800; color: var(--text); white-space: nowrap;
-    }
-    .nav__brand .dot { color: var(--mint); }
-    .nav__links { display: flex; align-items: center; gap: 20px; list-style: none; }
-    .nav__links a { font-size: 0.85rem; font-weight: 500; color: var(--text-muted); transition: color var(--transition); }
-    .nav__links a:hover { color: var(--mint); }
-    .nav__search { flex: 1; max-width: 320px; position: relative; }
-    .nav__search input {
-      width: 100%; background: var(--surface); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 8px 16px 8px 36px;
-      font-family: var(--font-sans); font-size: 0.85rem; color: var(--text);
-      outline: none; transition: border-color var(--transition);
-    }
-    .nav__search input:focus { border-color: var(--mint); }
-    .nav__search input::placeholder { color: var(--text-dim); }
-    .nav__search-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-dim); pointer-events: none; }
+    .nav{position:sticky;top:0;z-index:100;background:rgba(10,15,30,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+    .nav__inner{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px;}
+    .nav__brand{display:flex;align-items:center;gap:10px;font-size:1.1rem;font-weight:800;color:var(--text);white-space:nowrap;text-decoration:none;}
+    .nav__brand .dot{color:var(--mint);}
+    .nav__search{flex:1;max-width:280px;position:relative;}
+    .nav__search input{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:8px 16px 8px 36px;font-family:var(--font-sans);font-size:0.85rem;color:var(--text);outline:none;transition:border-color var(--transition);}
+    .nav__search input:focus{border-color:var(--mint);}
+    .nav__search input::placeholder{color:var(--text-dim);}
+    .nav__search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--text-dim);pointer-events:none;}
+    .nav__links{display:flex;align-items:center;gap:16px;list-style:none;}
+    .nav__links a{font-size:0.85rem;font-weight:500;color:var(--text-muted);transition:color var(--transition);}
+    .nav__links a:hover{color:var(--mint);}
+    .nav__auth{display:flex;align-items:center;gap:8px;}
 
     /* Hero */
-    .hero {
-      padding: 96px 0 72px;
-      background:
-        radial-gradient(ellipse 90% 70% at 50% 0%, rgba(29,209,161,0.07) 0%, transparent 65%),
-        radial-gradient(ellipse 50% 40% at 85% 60%, rgba(168,85,247,0.05) 0%, transparent 60%),
-        linear-gradient(180deg, var(--navy-deeper) 0%, var(--dark-bg) 100%);
-      text-align: center; position: relative; overflow: hidden;
-    }
-    .hero::before {
-      content: ''; position: absolute; inset: 0;
-      background-image: radial-gradient(circle, rgba(29,209,161,0.06) 1px, transparent 1px);
-      background-size: 44px 44px; pointer-events: none;
-    }
-    .hero__eyebrow {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(29,209,161,0.08); border: 1px solid rgba(29,209,161,0.2);
-      padding: 6px 18px; border-radius: 999px;
-      font-size: 0.78rem; font-weight: 700; color: var(--mint); margin-bottom: 24px;
-      letter-spacing: 0.04em;
-    }
-    .hero h1 { font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 800; line-height: 1.12; margin-bottom: 20px; }
-    .hero h1 .accent { color: var(--mint); }
-    .hero p.lead { font-size: 1.05rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 36px; line-height: 1.7; }
-    .hero__actions { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 56px; }
-    .hero__stats {
-      display: flex; justify-content: center; flex-wrap: wrap;
-      border: 1px solid var(--border); border-radius: var(--radius-lg);
-      background: rgba(13,27,46,0.7); max-width: 760px; margin: 0 auto; overflow: hidden;
-    }
-    .hero__stat { flex: 1; min-width: 130px; padding: 20px 16px; text-align: center; border-right: 1px solid var(--border); }
-    .hero__stat:last-child { border-right: none; }
-    .hero__stat-num   { font-size: 1.8rem; font-weight: 800; color: var(--mint); }
-    .hero__stat-label { font-size: 0.72rem; color: var(--text-dim); margin-top: 3px; }
+    .hero{padding:80px 0 60px;background:radial-gradient(ellipse 90% 70% at 50% 0%,rgba(29,209,161,0.07) 0%,transparent 65%),radial-gradient(ellipse 50% 40% at 85% 60%,rgba(168,85,247,0.05) 0%,transparent 60%),linear-gradient(180deg,var(--navy-deeper) 0%,var(--dark-bg) 100%);text-align:center;position:relative;overflow:hidden;}
+    .hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(29,209,161,0.06) 1px,transparent 1px);background-size:44px 44px;pointer-events:none;}
+    .hero__eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(29,209,161,0.08);border:1px solid rgba(29,209,161,0.2);padding:6px 18px;border-radius:999px;font-size:0.78rem;font-weight:700;color:var(--mint);margin-bottom:24px;letter-spacing:0.04em;}
+    .hero h1{font-size:clamp(2.2rem,5.5vw,4rem);font-weight:800;line-height:1.12;margin-bottom:20px;}
+    .hero h1 .accent{color:var(--mint);}
+    .hero p.lead{font-size:1.05rem;color:var(--text-muted);max-width:600px;margin:0 auto 36px;line-height:1.7;}
+    .hero__actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:48px;}
+    .hero__stats{display:flex;justify-content:center;flex-wrap:wrap;border:1px solid var(--border);border-radius:var(--radius-lg);background:rgba(13,27,46,0.7);max-width:760px;margin:0 auto;overflow:hidden;}
+    .hero__stat{flex:1;min-width:130px;padding:20px 16px;text-align:center;border-right:1px solid var(--border);}
+    .hero__stat:last-child{border-right:none;}
+    .hero__stat-num{font-size:1.8rem;font-weight:800;color:var(--mint);}
+    .hero__stat-label{font-size:0.72rem;color:var(--text-dim);margin-top:3px;}
 
-    /* Category filter bar */
-    .category-bar { background: var(--navy-deeper); border-bottom: 1px solid var(--border); }
-    .category-bar__inner { display: flex; align-items: center; overflow-x: auto; scrollbar-width: none; }
-    .category-bar__inner::-webkit-scrollbar { display: none; }
-    .cat-pill {
-      padding: 14px 20px; white-space: nowrap;
-      font-size: 0.83rem; font-weight: 600; color: var(--text-muted);
-      cursor: pointer; border: none; background: transparent;
-      border-bottom: 2px solid transparent; transition: all var(--transition);
-      display: flex; align-items: center; gap: 6px; font-family: var(--font-sans);
-    }
-    .cat-pill:hover  { color: var(--text); }
-    .cat-pill.active { color: var(--mint); border-bottom-color: var(--mint); }
+    /* Category bar */
+    .category-bar{background:var(--navy-deeper);border-bottom:1px solid var(--border);position:sticky;top:64px;z-index:90;}
+    .category-bar__inner{display:flex;align-items:center;overflow-x:auto;scrollbar-width:none;}
+    .category-bar__inner::-webkit-scrollbar{display:none;}
+    .cat-pill{padding:14px 18px;white-space:nowrap;font-size:0.83rem;font-weight:600;color:var(--text-muted);cursor:pointer;border:none;background:transparent;border-bottom:2px solid transparent;transition:all var(--transition);display:flex;align-items:center;gap:6px;font-family:var(--font-sans);}
+    .cat-pill:hover{color:var(--text);}
+    .cat-pill.active{color:var(--mint);border-bottom-color:var(--mint);}
 
     /* Sections */
-    .section { padding: 72px 0; }
-    .section--alt { background: rgba(13,27,46,0.4); }
-    .section__header { margin-bottom: 40px; }
-    .section__header h2 { font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 800; margin-bottom: 8px; }
-    .section__header p  { color: var(--text-muted); font-size: 0.9rem; }
-    .section__header--center { text-align: center; }
-    .section__header--center p { max-width: 520px; margin: 0 auto; }
-
-    /* Product grid */
-    .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
-
-    /* Cards */
-    .card {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: var(--radius-lg); overflow: hidden;
-      display: flex; flex-direction: column;
-      transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
-    }
-    .card:hover { transform: translateY(-3px); border-color: rgba(29,209,161,0.25); box-shadow: 0 12px 40px rgba(0,0,0,0.35); }
-    .card--featured { border-color: var(--gold); box-shadow: 0 0 0 1px rgba(184,151,58,0.15); }
-    .card--featured:hover { border-color: var(--gold-hover); }
-    .card--ai { border-color: rgba(168,85,247,0.25); background: linear-gradient(160deg, rgba(168,85,247,0.04) 0%, var(--surface) 60%); }
-    .card--ai:hover { border-color: rgba(168,85,247,0.55); }
-
-    .card__preview { position: relative; height: 180px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
-    .card__preview-icon { font-size: 3.5rem; }
-    .card__badge-row { position: absolute; top: 10px; left: 10px; display: flex; gap: 5px; flex-wrap: wrap; }
-    .card__ribbon {
-      position: absolute; top: 14px; right: -28px;
-      background: var(--gold); color: #000;
-      font-size: 0.62rem; font-weight: 800; letter-spacing: 0.07em;
-      padding: 4px 40px; transform: rotate(45deg);
-    }
-    .card__ribbon--hot { background: var(--danger); color: #fff; }
-    .card__ribbon--ai  { background: var(--purple); color: #fff; }
-
-    .card__body { padding: 20px; flex: 1; display: flex; flex-direction: column; gap: 10px; }
-    .card__name { font-size: 1rem; font-weight: 700; line-height: 1.3; }
-    .card__desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; flex: 1; }
-
-    .tier { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; font-size: 0.78rem; }
-    .tier__col { padding: 12px 14px; }
-    .tier__col + .tier__col { border-left: 1px solid var(--border); }
-    .tier__col--pro { background: rgba(184,151,58,0.04); }
-    .tier__label { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between; }
-    .tier__col--free .tier__label { color: var(--mint); }
-    .tier__col--pro  .tier__label { color: var(--gold); }
-    .tier__item { display: flex; align-items: flex-start; gap: 5px; color: var(--text-muted); margin-bottom: 5px; line-height: 1.35; }
-    .tier__item .i { flex-shrink: 0; margin-top: 1px; }
-    .tier__item .locked { opacity: 0.45; }
-
-    .price-row { display: flex; align-items: center; justify-content: space-between; background: var(--surface-2); border-radius: var(--radius); padding: 12px 16px; gap: 12px; }
-    .price-row__block { display: flex; flex-direction: column; }
-    .price-row__label { font-size: 0.65rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; }
-    .price-row__value { font-size: 1.25rem; font-weight: 800; line-height: 1.2; }
-    .price-row__value--free { color: var(--mint); }
-    .price-row__value--pro  { color: var(--gold); }
-    .price-row__divider { width: 1px; height: 36px; background: var(--border); }
-
-    .card__actions { padding: 0 20px 20px; display: flex; gap: 8px; }
-    .card__actions .btn { flex: 1; }
-
-    /* Featured hero cards */
-    .featured-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
-    .featured-card {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: var(--radius-lg); padding: 28px;
-      display: flex; gap: 20px; align-items: center;
-      transition: all var(--transition);
-    }
-    .featured-card:hover { border-color: rgba(29,209,161,0.3); box-shadow: 0 12px 40px rgba(0,0,0,0.3); transform: translateY(-2px); }
-    .featured-card__icon { font-size: 3rem; flex-shrink: 0; }
-    .featured-card__title { font-size: 1.1rem; font-weight: 800; margin-bottom: 6px; }
-    .featured-card__desc  { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 14px; line-height: 1.6; }
-    .featured-card__meta  { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-    .featured-card__price { font-size: 1.05rem; font-weight: 800; color: var(--gold); }
-    .featured-card__free  { font-size: 0.78rem; color: var(--mint); font-weight: 600; }
+    .section{padding:60px 0;}
+    .section--alt{background:rgba(13,27,46,0.4);}
 
     /* Category section */
-    .cat-section { margin-bottom: 64px; }
-    .cat-section__header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
-    .cat-section__title { display: flex; align-items: center; gap: 10px; font-size: 1.1rem; font-weight: 800; }
-    .cat-section__icon  { font-size: 1.35rem; }
-    .cat-section__link  { font-size: 0.82rem; color: var(--mint); font-weight: 600; }
+    .cat-section{margin-bottom:72px;}
+    .cat-section__header{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid var(--border);}
+    .cat-section__title{display:flex;align-items:center;gap:10px;font-size:1.15rem;font-weight:800;}
+    .cat-section__icon{font-size:1.4rem;}
+    .cat-section__link{font-size:0.82rem;color:var(--mint);font-weight:600;}
+    .cat-section__sub{font-size:0.8rem;color:var(--text-dim);font-weight:500;margin-left:4px;}
 
-    /* Pricing plans */
-    .plans-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; max-width: 960px; margin: 0 auto; }
-    .plan { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 32px 24px; position: relative; display: flex; flex-direction: column; }
-    .plan--popular { border-color: var(--mint); box-shadow: 0 0 0 1px rgba(29,209,161,0.15), 0 20px 60px rgba(0,0,0,0.25); }
-    .plan__badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--mint); color: #000; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.07em; text-transform: uppercase; padding: 3px 14px; border-radius: 999px; }
-    .plan__name   { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text-dim); margin-bottom: 8px; }
-    .plan__price  { font-size: 2.2rem; font-weight: 800; margin-bottom: 4px; }
-    .plan__price sub { font-size: 1rem; font-weight: 600; vertical-align: super; margin-right: 2px; }
-    .plan__period { font-size: 0.76rem; color: var(--text-dim); margin-bottom: 24px; }
-    .plan--free   .plan__price { color: var(--mint); }
-    .plan--pro    .plan__price { color: var(--gold); }
-    .plan--bundle .plan__price { color: var(--cyan); }
-    .plan__features { list-style: none; flex: 1; margin-bottom: 24px; }
-    .plan__features li { display: flex; align-items: flex-start; gap: 8px; font-size: 0.83rem; color: var(--text-muted); padding: 7px 0; border-bottom: 1px solid var(--border); }
-    .plan__features li:last-child { border-bottom: none; }
-    .plan__features .fi { flex-shrink: 0; margin-top: 1px; }
+    /* Sub-group label inside a section */
+    .sub-group{margin-bottom:32px;}
+    .sub-group__label{font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-dim);margin-bottom:16px;padding:6px 12px;background:var(--surface-2);border-radius:8px;display:inline-block;}
+    .sub-group__label--agents{color:var(--purple);}
+    .sub-group__label--workflows{color:var(--cyan);}
+
+    /* Product grid */
+    .product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;}
+
+    /* Cards */
+    .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;display:flex;flex-direction:column;transition:transform var(--transition),border-color var(--transition),box-shadow var(--transition);}
+    .card:hover{transform:translateY(-3px);border-color:rgba(29,209,161,0.25);box-shadow:0 12px 40px rgba(0,0,0,0.35);}
+    .card--featured{border-color:var(--gold);}
+    .card--ai{border-color:rgba(168,85,247,0.25);background:linear-gradient(160deg,rgba(168,85,247,0.04) 0%,var(--surface) 60%);}
+    .card--ai:hover{border-color:rgba(168,85,247,0.55);}
+    .card--web{border-color:rgba(99,179,237,0.2);background:linear-gradient(160deg,rgba(99,179,237,0.04) 0%,var(--surface) 60%);}
+    .card--video{border-color:rgba(249,115,22,0.2);background:linear-gradient(160deg,rgba(249,115,22,0.04) 0%,var(--surface) 60%);}
+    .card--font{border-color:rgba(251,191,36,0.2);background:linear-gradient(160deg,rgba(251,191,36,0.03) 0%,var(--surface) 60%);}
+    .card--edu{border-color:rgba(34,197,94,0.2);background:linear-gradient(160deg,rgba(34,197,94,0.04) 0%,var(--surface) 60%);}
+
+    .card__preview{position:relative;height:140px;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+    .card__preview-icon{font-size:3rem;}
+    .card__badge-row{position:absolute;top:10px;left:10px;display:flex;gap:5px;flex-wrap:wrap;}
+    .card__ribbon{position:absolute;top:14px;right:-28px;background:var(--gold);color:#000;font-size:0.62rem;font-weight:800;letter-spacing:0.07em;padding:4px 40px;transform:rotate(45deg);}
+    .card__ribbon--hot{background:var(--danger);color:#fff;}
+    .card__ribbon--ai{background:var(--purple);color:#fff;}
+
+    .card__body{padding:16px;flex:1;display:flex;flex-direction:column;gap:8px;}
+    .card__name{font-size:0.95rem;font-weight:700;line-height:1.3;}
+    .card__desc{font-size:0.8rem;color:var(--text-muted);line-height:1.6;flex:1;}
+    .card__features{list-style:none;font-size:0.78rem;color:var(--text-muted);}
+    .card__features li{padding:3px 0;display:flex;align-items:flex-start;gap:6px;}
+    .card__features .cf{flex-shrink:0;margin-top:1px;}
+    .card__features .locked{opacity:0.4;}
+
+    .card__actions{padding:0 16px 16px;display:flex;gap:8px;}
+    .card__actions .btn{flex:1;}
+
+    /* Category pricing banner */
+    .cat-pricing{margin-top:32px;border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border);}
+    .cat-pricing__header{padding:18px 24px;background:var(--surface-2);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);}
+    .cat-pricing__title{font-size:0.82rem;font-weight:700;text-transform:uppercase;letter-spacing:0.07em;color:var(--text-dim);}
+    .cat-pricing__note{font-size:0.75rem;color:var(--text-dim);}
+    .cat-pricing__tiers{display:grid;gap:0;}
+    .cat-pricing__tier{display:grid;grid-template-columns:160px 1fr auto;align-items:center;gap:16px;padding:16px 24px;border-bottom:1px solid var(--border);}
+    .cat-pricing__tier:last-child{border-bottom:none;}
+    .cat-pricing__tier--bundle{background:rgba(184,151,58,0.04);}
+    .cat-pricing__tier-name{font-size:0.88rem;font-weight:700;}
+    .cat-pricing__tier-name--free{color:var(--mint);}
+    .cat-pricing__tier-name--pro{color:var(--gold);}
+    .cat-pricing__tier-name--bundle{color:var(--cyan);}
+    .cat-pricing__tier-desc{font-size:0.78rem;color:var(--text-muted);line-height:1.5;}
+    .cat-pricing__tier-price{font-size:1.2rem;font-weight:800;white-space:nowrap;text-align:right;}
+    .cat-pricing__tier-price--free{color:var(--mint);}
+    .cat-pricing__tier-price--pro{color:var(--gold);}
+    .cat-pricing__tier-price--bundle{color:var(--cyan);}
 
     /* FAQ */
-    .faq { max-width: 720px; margin: 0 auto; }
-    .faq-item { border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 10px; overflow: hidden; }
-    .faq-q { width: 100%; text-align: left; background: var(--surface); border: none; padding: 18px 22px; font-family: var(--font-sans); font-size: 0.9rem; font-weight: 600; color: var(--text); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; transition: background var(--transition); }
-    .faq-q:hover { background: var(--surface-hover); }
-    .faq-q .arr { color: var(--mint); font-size: 1.2rem; transition: transform 0.2s; flex-shrink: 0; }
-    .faq-item.open .faq-q .arr { transform: rotate(45deg); }
-    .faq-a { display: none; padding: 0 22px 18px; font-size: 0.85rem; color: var(--text-muted); line-height: 1.75; background: var(--surface); }
-    .faq-item.open .faq-a { display: block; }
+    .faq{max-width:720px;margin:0 auto;}
+    .faq-item{border:1px solid var(--border);border-radius:var(--radius);margin-bottom:10px;overflow:hidden;}
+    .faq-q{width:100%;text-align:left;background:var(--surface);border:none;padding:18px 22px;font-family:var(--font-sans);font-size:0.9rem;font-weight:600;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;transition:background var(--transition);}
+    .faq-q:hover{background:var(--surface-hover);}
+    .faq-q .arr{color:var(--mint);font-size:1.2rem;transition:transform 0.2s;flex-shrink:0;}
+    .faq-item.open .faq-q .arr{transform:rotate(45deg);}
+    .faq-a{display:none;padding:0 22px 18px;font-size:0.85rem;color:var(--text-muted);line-height:1.75;background:var(--surface);}
+    .faq-item.open .faq-a{display:block;}
 
-    /* CTA Banner */
-    .cta-banner { background: linear-gradient(135deg, rgba(29,209,161,0.07) 0%, rgba(168,85,247,0.05) 100%); border: 1px solid rgba(29,209,161,0.18); border-radius: var(--radius-lg); padding: 64px 48px; text-align: center; }
-    .cta-banner h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 800; margin-bottom: 12px; }
-    .cta-banner p  { color: var(--text-muted); margin-bottom: 32px; max-width: 500px; margin-left: auto; margin-right: auto; }
+    /* Section header */
+    .section__header{margin-bottom:40px;}
+    .section__header h2{font-size:clamp(1.4rem,2.5vw,2rem);font-weight:800;margin-bottom:8px;}
+    .section__header p{color:var(--text-muted);font-size:0.9rem;}
+    .section__header--center{text-align:center;}
+    .section__header--center p{max-width:520px;margin:0 auto;}
+
+    /* CTA */
+    .cta-banner{background:linear-gradient(135deg,rgba(29,209,161,0.07) 0%,rgba(168,85,247,0.05) 100%);border:1px solid rgba(29,209,161,0.18);border-radius:var(--radius-lg);padding:64px 48px;text-align:center;}
+    .cta-banner h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;margin-bottom:12px;}
+    .cta-banner p{color:var(--text-muted);margin-bottom:32px;max-width:500px;margin-left:auto;margin-right:auto;}
 
     /* Footer */
-    .footer { background: var(--navy-deeper); border-top: 1px solid var(--border); padding: 52px 0 32px; }
-    .footer__inner { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
-    .footer__brand { font-size: 1.1rem; font-weight: 800; margin-bottom: 10px; }
-    .footer__brand .dot { color: var(--mint); }
-    .footer__brand-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.7; }
-    .footer__col-title { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); margin-bottom: 14px; }
-    .footer__links { list-style: none; }
-    .footer__links li { margin-bottom: 9px; }
-    .footer__links a { font-size: 0.82rem; color: var(--text-muted); transition: color var(--transition); }
-    .footer__links a:hover { color: var(--mint); }
-    .footer__bottom { border-top: 1px solid var(--border); padding-top: 22px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
-    .footer__bottom p { font-size: 0.78rem; color: var(--text-dim); }
+    .footer{background:var(--navy-deeper);border-top:1px solid var(--border);padding:52px 0 32px;}
+    .footer__inner{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+    .footer__brand{font-size:1.1rem;font-weight:800;margin-bottom:10px;}
+    .footer__brand .dot{color:var(--mint);}
+    .footer__brand-desc{font-size:0.82rem;color:var(--text-muted);line-height:1.7;margin-bottom:16px;}
+    .footer__col-title{font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-dim);margin-bottom:14px;}
+    .footer__links{list-style:none;}
+    .footer__links li{margin-bottom:9px;}
+    .footer__links a{font-size:0.82rem;color:var(--text-muted);transition:color var(--transition);}
+    .footer__links a:hover{color:var(--mint);}
+    .footer__bottom{border-top:1px solid var(--border);padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .footer__bottom p{font-size:0.78rem;color:var(--text-dim);}
 
-    @media (max-width: 900px) {
-      .featured-strip { grid-template-columns: 1fr; }
-      .footer__inner { grid-template-columns: 1fr 1fr; }
-      .nav__search { display: none; }
+    @media(max-width:900px){
+      .footer__inner{grid-template-columns:1fr 1fr;}
+      .nav__search{display:none;}
+      .cat-pricing__tier{grid-template-columns:1fr;gap:6px;}
     }
-    @media (max-width: 640px) {
-      .footer__inner { grid-template-columns: 1fr; }
-      .cta-banner { padding: 40px 24px; }
-      .featured-card { flex-direction: column; text-align: center; }
+    @media(max-width:640px){
+      .footer__inner{grid-template-columns:1fr;}
+      .cta-banner{padding:40px 24px;}
+      .nav__auth .btn--ghost{display:none;}
     }
   </style>
 </head>
@@ -318,23 +221,22 @@
 <nav class="nav">
   <div class="container">
     <div class="nav__inner">
-      <div class="nav__brand">
-        <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
-          <rect width="30" height="30" rx="9" fill="#1dd1a1" fill-opacity="0.12"/>
-          <path d="M8 15h4l3-7 4 14 3-7h5" stroke="#1dd1a1" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+      <a class="nav__brand" href="#">
+        <svg width="28" height="28" viewBox="0 0 30 30" fill="none"><rect width="30" height="30" rx="9" fill="#1dd1a1" fill-opacity="0.12"/><path d="M8 15h4l3-7 4 14 3-7h5" stroke="#1dd1a1" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         DGT<span class="dot">.</span>Market
-      </div>
+      </a>
       <div class="nav__search">
         <span class="nav__search-icon">⌕</span>
-        <input type="search" placeholder="Search themes, agents, MCQs…" aria-label="Search" />
+        <input type="search" placeholder="Search fonts, LUTs, agents, templates…" aria-label="Search" />
       </div>
       <ul class="nav__links">
         <li><a href="#products">Products</a></li>
-        <li><a href="#pricing">Pricing</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="https://dgtmint.com" class="btn btn--outline btn--sm">← DGT Mint</a></li>
       </ul>
+      <div class="nav__auth">
+        <a href="#" class="btn btn--ghost btn--sm">Log In</a>
+        <a href="#" class="btn btn--primary btn--sm">Sign Up</a>
+      </div>
     </div>
   </div>
 </nav>
@@ -344,17 +246,17 @@
   <div class="container" style="position:relative;z-index:1;">
     <div class="hero__eyebrow">✦ &nbsp;India's Digital Product Marketplace · By Digitruinx</div>
     <h1>Everything Digital.<br /><span class="accent">One Marketplace.</span></h1>
-    <p class="lead">AI agents, WordPress themes, motion graphics, MCQ bundles, LMS courses, workflows — built by Digitruinx for creators, students, and businesses across India.</p>
+    <p class="lead">Fonts, LUTs, music, AI agents, web templates, motion graphics, WordPress themes, MCQ bundles — built by Digitruinx for creators, students, and businesses across India.</p>
     <div class="hero__actions">
       <a href="#products" class="btn btn--primary">Browse Products</a>
-      <a href="#pricing" class="btn btn--outline">Pricing &amp; Plans</a>
+      <a href="#" class="btn btn--ghost">Log In</a>
     </div>
     <div class="hero__stats">
-      <div class="hero__stat"><div class="hero__stat-num">100+</div><div class="hero__stat-label">Digital Products</div></div>
-      <div class="hero__stat"><div class="hero__stat-num">8</div><div class="hero__stat-label">Categories</div></div>
-      <div class="hero__stat"><div class="hero__stat-num">Free</div><div class="hero__stat-label">Starting Point</div></div>
-      <div class="hero__stat"><div class="hero__stat-num">₹499</div><div class="hero__stat-label">Pro from</div></div>
-      <div class="hero__stat"><div class="hero__stat-num">24 hr</div><div class="hero__stat-label">Delivery</div></div>
+      <div class="hero__stat"><div class="hero__stat-num">500+</div><div class="hero__stat-label">Digital Products</div></div>
+      <div class="hero__stat"><div class="hero__stat-num">7</div><div class="hero__stat-label">Bundles</div></div>
+      <div class="hero__stat"><div class="hero__stat-num">Free</div><div class="hero__stat-label">Tier on All</div></div>
+      <div class="hero__stat"><div class="hero__stat-num">₹299</div><div class="hero__stat-label">Starting From</div></div>
+      <div class="hero__stat"><div class="hero__stat-num">🇮🇳</div><div class="hero__stat-label">Made in India</div></div>
     </div>
   </div>
 </section>
@@ -364,13 +266,12 @@
   <div class="container">
     <div class="category-bar__inner">
       <button class="cat-pill active" data-cat="all">🛍️ All Products</button>
-      <button class="cat-pill" data-cat="ai">🤖 AI Agents</button>
-      <button class="cat-pill" data-cat="workflow">⚙️ AI Workflows</button>
-      <button class="cat-pill" data-cat="wp">🧩 WP Themes &amp; Plugins</button>
-      <button class="cat-pill" data-cat="custom">💻 Custom PHP Sites</button>
-      <button class="cat-pill" data-cat="motion">🎬 Motion Graphics</button>
-      <button class="cat-pill" data-cat="mcq">📝 MCQ Bundles</button>
-      <button class="cat-pill" data-cat="lms">🎓 LMS / Courses</button>
+      <button class="cat-pill" data-cat="web">🌐 Web Templates</button>
+      <button class="cat-pill" data-cat="video">🎬 Video Editing Suite</button>
+      <button class="cat-pill" data-cat="fonts">🔤 Fonts</button>
+      <button class="cat-pill" data-cat="ai">🤖 AI Suite</button>
+      <button class="cat-pill" data-cat="edu">📚 Edu &amp; Exam</button>
+      <button class="cat-pill" data-cat="wp">🧩 WordPress &amp; Dev</button>
       <button class="cat-pill" data-cat="training">🧠 AI Training</button>
     </div>
   </div>
@@ -380,750 +281,609 @@
 <section class="section" id="products">
   <div class="container">
 
-    <!-- AI Agents -->
+    <!-- ═══ WEB TEMPLATES ═══ -->
+    <div class="cat-section" data-cat-group="web">
+      <div class="cat-section__header">
+        <div class="cat-section__title"><span class="cat-section__icon">🌐</span> Web Templates <span class="cat-section__sub">— HTML/CSS + WordPress Ready</span></div>
+        <a href="#" class="cat-section__link">View all →</a>
+      </div>
+      <div class="product-grid">
+
+        <div class="card card--web">
+          <div class="card__preview" style="background:linear-gradient(135deg,#0a1628,#0d2040);"><div class="card__preview-icon">💼</div><div class="card__badge-row"><span class="badge badge--web">Web</span><span class="badge badge--hot">Best Seller</span></div></div>
+          <div class="card__body">
+            <div class="card__name">Business Landing Page Templates</div>
+            <div class="card__desc">10 premium business landing pages. Clean, conversion-focused, mobile-first. HTML/CSS + WordPress compatible.</div>
+            <ul class="card__features">
+              <li><span class="cf check">✓</span> 10 unique designs</li>
+              <li><span class="cf check">✓</span> Contact forms included</li>
+              <li><span class="cf check">✓</span> SEO meta structure</li>
+              <li><span class="cf cross locked">○</span> <span class="locked">Commercial license</span></li>
+            </ul>
+          </div>
+          <div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Preview</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div>
+        </div>
+
+        <div class="card card--web">
+          <div class="card__preview" style="background:linear-gradient(135deg,#0d1a28,#112030);"><div class="card__preview-icon">🛍️</div><div class="card__badge-row"><span class="badge badge--web">Web</span><span class="badge badge--new">New</span></div></div>
+          <div class="card__body">
+            <div class="card__name">E-commerce Storefront Templates</div>
+            <div class="card__desc">8 WooCommerce-ready storefront templates. Product grids, cart, checkout pages. Fashion, electronics, grocery styles.</div>
+            <ul class="card__features">
+              <li><span class="cf check">✓</span> WooCommerce ready</li>
+              <li><span class="cf check">✓</span> Mobile-first design</li>
+              <li><span class="cf check">✓</span> Cart + checkout pages</li>
+              <li><span class="cf cross locked">○</span> <span class="locked">Custom domain license</span></li>
+            </ul>
+          </div>
+          <div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Preview</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div>
+        </div>
+
+        <div class="card card--web">
+          <div class="card__preview" style="background:linear-gradient(135deg,#0a1a14,#0d2018);"><div class="card__preview-icon">🎨</div><div class="card__badge-row"><span class="badge badge--web">Web</span></div></div>
+          <div class="card__body">
+            <div class="card__name">Portfolio Website Templates</div>
+            <div class="card__desc">8 stunning portfolio templates for designers, photographers, developers, artists. Animated, dark/light modes.</div>
+            <ul class="card__features">
+              <li><span class="cf check">✓</span> 8 unique styles</li>
+              <li><span class="cf check">✓</span> Dark + light mode</li>
+              <li><span class="cf check">✓</span> Smooth animations</li>
+              <li><span class="cf cross locked">○</span> <span class="locked">Unlimited projects</span></li>
+            </ul>
+          </div>
+          <div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Preview</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div>
+        </div>
+
+        <div class="card card--web">
+          <div class="card__preview" style="background:linear-gradient(135deg,#1a0a0a,#2a1010);"><div class="card__preview-icon">🍽️</div><div class="card__badge-row"><span class="badge badge--web">Web</span></div></div>
+          <div class="card__body">
+            <div class="card__name">Restaurant &amp; Food Website Templates</div>
+            <div class="card__desc">6 templates for restaurants, cafes, cloud kitchens. Menu pages, reservation forms, delivery integration ready.</div>
+            <ul class="card__features">
+              <li><span class="cf check">✓</span> Menu page included</li>
+              <li><span class="cf check">✓</span> Reservation form</li>
+              <li><span class="cf check">✓</span> Swiggy/Zomato link ready</li>
+              <li><span class="cf cross locked">○</span> <span class="locked">Online ordering plugin</span></li>
+            </ul>
+          </div>
+          <div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Preview</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div>
+        </div>
+
+        <div class="card card--web">
+          <div class="card__preview" style="background:linear-gradient(135deg,#0a1428,#0d1a30);"><div class="card__preview-icon">🏠</div><div class="card__badge-row"><span class="badge badge--web">Web</span></div></div>
+          <div class="card__body">
+            <div class="card__name">Real Estate Website Templates</div>
+            <div class="card__desc">5 real estate templates with property listing pages, map integration, lead capture forms. Builders, brokers, rental agencies.</div>
+            <ul class="card__features">
+              <li><span class="cf check">✓</span> Property listing grid</li>
+              <li><span class="cf check">✓</span> Lead capture forms</li>
+              <li><span class="cf check">✓</span> Google Maps ready</li>
+              <li><span class="cf cross locked">○</span> <span class="locked">MLS/filter integration</span></li>
+            </ul>
+          </div>
+          <div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Preview</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div>
+        </div>
+
+        <div class="card card--web">
+          <div class="card__preview" style="background:linear-gradient(135deg,#1a0a18,#2a1028);"><div class="card__preview-icon">💒</div><div class="card__badge-row"><span class="badge badge--web">Web</span><span class="badge badge--new">New</span></div></div>
+          <div class="card__body">
+            <div class="card__name">Wedding &amp; Event Templates</div>
+            <div class="card__desc">4 romantic wedding + 3 corporate event templates. RSVP pages, countdown timers, photo galleries.</div>
+            <ul class="card__features">
+              <li><span class="cf check">✓</span> RSVP form built-in</li>
+              <li><span class="cf check">✓</span> Countdown timer</li>
+              <li><span class="cf check">✓</span> Photo gallery</li>
+              <li><span class="cf cross locked">○</span> <span class="locked">Guest management panel</span></li>
+            </ul>
+          </div>
+          <div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Preview</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div>
+        </div>
+
+        <div class="card card--web">
+          <div class="card__preview" style="background:linear-gradient(135deg,#0a1820,#0d2028);"><div class="card__preview-icon">🏥</div><div class="card__badge-row"><span class="badge badge--web">Web</span></div></div>
+          <div class="card__body">
+            <div class="card__name">Doctor &amp; Clinic Website Templates</div>
+            <div class="card__desc">5 professional healthcare templates. Appointment booking, doctor profiles, services pages. HIPAA layout compliant.</div>
+            <ul class="card__features">
+              <li><span class="cf check">✓</span> Appointment booking form</li>
+              <li><span class="cf check">✓</span> Doctor profiles</li>
+              <li><span class="cf check">✓</span> Services + testimonials</li>
+              <li><span class="cf cross locked">○</span> <span class="locked">Online payment integration</span></li>
+            </ul>
+          </div>
+          <div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Preview</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div>
+        </div>
+
+        <div class="card card--web">
+          <div class="card__preview" style="background:linear-gradient(135deg,#1a1000,#2a1800);"><div class="card__preview-icon">💪</div><div class="card__badge-row"><span class="badge badge--web">Web</span></div></div>
+          <div class="card__body">
+            <div class="card__name">Gym &amp; Fitness Templates</div>
+            <div class="card__desc">4 high-energy gym/fitness templates. Class schedules, trainer profiles, membership pricing, before/after galleries.</div>
+            <ul class="card__features">
+              <li><span class="cf check">✓</span> Class schedule table</li>
+              <li><span class="cf check">✓</span> Trainer profiles</li>
+              <li><span class="cf check">✓</span> Membership pricing table</li>
+              <li><span class="cf cross locked">○</span> <span class="locked">Online membership portal</span></li>
+            </ul>
+          </div>
+          <div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Preview</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div>
+        </div>
+
+        <div class="card card--web">
+          <div class="card__preview" style="background:linear-gradient(135deg,#0a1820,#0a2018);"><div class="card__preview-icon">✈️</div><div class="card__badge-row"><span class="badge badge--web">Web</span></div></div>
+          <div class="card__body">
+            <div class="card__name">Travel Agency Templates</div>
+            <div class="card__desc">5 travel agency templates. Tour packages, destination pages, booking inquiry forms, testimonials. India-focused designs.</div>
+            <ul class="card__features">
+              <li><span class="cf check">✓</span> Tour package pages</li>
+              <li><span class="cf check">✓</span> Inquiry/booking form</li>
+              <li><span class="cf check">✓</span> Destination gallery</li>
+              <li><span class="cf cross locked">○</span> <span class="locked">Payment gateway</span></li>
+            </ul>
+          </div>
+          <div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Preview</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div>
+        </div>
+
+        <div class="card card--web">
+          <div class="card__preview" style="background:linear-gradient(135deg,#0a1428,#0d1820);"><div class="card__preview-icon">🎓</div><div class="card__badge-row"><span class="badge badge--web">Web</span></div></div>
+          <div class="card__body">
+            <div class="card__name">Educational Institute Templates</div>
+            <div class="card__desc">4 templates for schools, coaching centres, colleges. Admission forms, course pages, faculty profiles, results pages.</div>
+            <ul class="card__features">
+              <li><span class="cf check">✓</span> Admission form</li>
+              <li><span class="cf check">✓</span> Course listing</li>
+              <li><span class="cf check">✓</span> Faculty profiles</li>
+              <li><span class="cf cross locked">○</span> <span class="locked">Student portal</span></li>
+            </ul>
+          </div>
+          <div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Preview</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div>
+        </div>
+
+        <div class="card card--web">
+          <div class="card__preview" style="background:linear-gradient(135deg,#001828,#002030);"><div class="card__preview-icon">🚀</div><div class="card__badge-row"><span class="badge badge--web">Web</span><span class="badge badge--hot">Hot</span></div></div>
+          <div class="card__body">
+            <div class="card__name">Startup SaaS Landing Page Templates</div>
+            <div class="card__desc">6 modern SaaS landing pages. Feature sections, pricing tables, testimonials, waitlist forms. Dark + light variants.</div>
+            <ul class="card__features">
+              <li><span class="cf check">✓</span> Pricing table included</li>
+              <li><span class="cf check">✓</span> Waitlist/CTA form</li>
+              <li><span class="cf check">✓</span> Dark + light mode</li>
+              <li><span class="cf cross locked">○</span> <span class="locked">Integrated analytics</span></li>
+            </ul>
+          </div>
+          <div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Preview</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div>
+        </div>
+
+        <div class="card card--web">
+          <div class="card__preview" style="background:linear-gradient(135deg,#0a1a10,#0d2014);"><div class="card__preview-icon">🤝</div><div class="card__badge-row"><span class="badge badge--web">Web</span></div></div>
+          <div class="card__body">
+            <div class="card__name">NGO &amp; Charity Website Templates</div>
+            <div class="card__desc">3 templates for NGOs, charities, social enterprises. Donation pages, cause sections, volunteer forms, impact stats.</div>
+            <ul class="card__features">
+              <li><span class="cf check">✓</span> Donation page layout</li>
+              <li><span class="cf check">✓</span> Cause + impact section</li>
+              <li><span class="cf check">✓</span> Volunteer sign-up form</li>
+              <li><span class="cf cross locked">○</span> <span class="locked">Razorpay donation integration</span></li>
+            </ul>
+          </div>
+          <div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Preview</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div>
+        </div>
+
+      </div>
+      <!-- Web Templates Pricing -->
+      <div class="cat-pricing">
+        <div class="cat-pricing__header"><div class="cat-pricing__title">🌐 Web Templates — Pricing</div><div class="cat-pricing__note">One-time purchase · Lifetime access · Commercial license included in Pro</div></div>
+        <div class="cat-pricing__tiers">
+          <div class="cat-pricing__tier"><div class="cat-pricing__tier-name cat-pricing__tier-name--free">Free Preview</div><div class="cat-pricing__tier-desc">1 template per pack · Personal use only · No commercial license</div><div class="cat-pricing__tier-price cat-pricing__tier-price--free">₹0</div></div>
+          <div class="cat-pricing__tier"><div class="cat-pricing__tier-name cat-pricing__tier-name--pro">Pro Pack</div><div class="cat-pricing__tier-desc">Full template pack · Commercial license · Source files + 6 months support</div><div class="cat-pricing__tier-price cat-pricing__tier-price--pro">₹799 – ₹1,499 / pack</div></div>
+          <div class="cat-pricing__tier cat-pricing__tier--bundle"><div class="cat-pricing__tier-name cat-pricing__tier-name--bundle">All Web Templates Bundle</div><div class="cat-pricing__tier-desc">All 12 template packs · 60+ templates · Unlimited commercial use · Priority support</div><div class="cat-pricing__tier-price cat-pricing__tier-price--bundle">₹3,999 one-time</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ VIDEO EDITING SUITE ═══ -->
+    <div class="cat-section" data-cat-group="video">
+      <div class="cat-section__header">
+        <div class="cat-section__title"><span class="cat-section__icon">🎬</span> VisualCraft Suite <span class="cat-section__sub">— Motion · LUTs · Music by Digitruinx</span></div>
+        <a href="#" class="cat-section__link">View all →</a>
+      </div>
+
+      <div class="sub-group">
+        <div class="sub-group__label">🎞️ Motion Graphics</div>
+        <div class="product-grid">
+          <div class="card card--video">
+            <div class="card__preview" style="background:linear-gradient(135deg,#1a0500,#0a0f1e);"><div class="card__preview-icon">🎞️</div><div class="card__badge-row"><span class="badge badge--motion">Motion</span><span class="badge badge--hot">Best Seller</span></div></div>
+            <div class="card__body"><div class="card__name">YouTube Intro Pack — 20 Templates</div><div class="card__desc">High-energy intros in 20 styles — tech, gaming, vlog, education, news. CapCut + DaVinci Resolve.</div><ul class="card__features"><li><span class="cf check">✓</span> 20 unique styles</li><li><span class="cf check">✓</span> CapCut + DaVinci</li><li><span class="cf check">✓</span> Commercial license</li></ul></div>
+            <div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Sample</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div>
+          </div>
+          <div class="card card--video">
+            <div class="card__preview" style="background:linear-gradient(135deg,#0a0f1e,#1a1000);"><div class="card__preview-icon">⚡</div><div class="card__badge-row"><span class="badge badge--motion">Motion</span></div></div>
+            <div class="card__body"><div class="card__name">Transitions Mega Pack — 50 Transitions</div><div class="card__desc">50 smooth transitions: glitch, whip, zoom, spin, light leak. AE + Premiere + DaVinci.</div><ul class="card__features"><li><span class="cf check">✓</span> 50 transitions</li><li><span class="cf check">✓</span> AE + Premiere + DR</li><li><span class="cf check">✓</span> 4K resolution</li></ul></div>
+            <div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Sample</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div>
+          </div>
+          <div class="card card--video">
+            <div class="card__preview" style="background:linear-gradient(135deg,#001018,#0a1020);"><div class="card__preview-icon">📺</div><div class="card__badge-row"><span class="badge badge--motion">Motion</span><span class="badge badge--new">New</span></div></div>
+            <div class="card__body"><div class="card__name">Lower Thirds &amp; Titles Pack</div><div class="card__desc">40 animated lower thirds and title cards. News style, minimal, cinematic. AE + CapCut.</div><ul class="card__features"><li><span class="cf check">✓</span> 40 animations</li><li><span class="cf check">✓</span> Editable text</li><li><span class="cf check">✓</span> Colour customisable</li></ul></div>
+            <div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Sample</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div>
+          </div>
+          <div class="card card--video">
+            <div class="card__preview" style="background:linear-gradient(135deg,#1a001a,#0a0010);"><div class="card__preview-icon">📱</div><div class="card__badge-row"><span class="badge badge--motion">Motion</span></div></div>
+            <div class="card__body"><div class="card__name">Social Media Stories Pack</div><div class="card__desc">60 animated Instagram/Reels/Shorts story templates. Product promo, sale, quote, countdown styles.</div><ul class="card__features"><li><span class="cf check">✓</span> 60 story templates</li><li><span class="cf check">✓</span> 9:16 + 1:1 formats</li><li><span class="cf check">✓</span> CapCut editable</li></ul></div>
+            <div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Sample</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div>
+          </div>
+          <div class="card card--video">
+            <div class="card__preview" style="background:linear-gradient(135deg,#0a1800,#102200);"><div class="card__preview-icon">✨</div><div class="card__badge-row"><span class="badge badge--motion">Motion</span></div></div>
+            <div class="card__body"><div class="card__name">Cinematic Overlays Pack</div><div class="card__desc">35 cinematic overlays: dust, bokeh, light leaks, film grain, lens flares. DaVinci + Premiere.</div><ul class="card__features"><li><span class="cf check">✓</span> 35 overlay clips</li><li><span class="cf check">✓</span> 4K ProRes</li><li><span class="cf check">✓</span> Blend mode ready</li></ul></div>
+            <div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Sample</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div>
+          </div>
+          <div class="card card--video">
+            <div class="card__preview" style="background:linear-gradient(135deg,#001428,#001828);"><div class="card__preview-icon">🎬</div><div class="card__badge-row"><span class="badge badge--motion">Motion</span></div></div>
+            <div class="card__body"><div class="card__name">Outro &amp; End Screen Pack</div><div class="card__desc">25 YouTube outro templates with subscribe animations, end screen layouts. CapCut + AE.</div><ul class="card__features"><li><span class="cf check">✓</span> 25 outro templates</li><li><span class="cf check">✓</span> Subscribe animation</li><li><span class="cf check">✓</span> Editable branding</li></ul></div>
+            <div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Sample</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div>
+          </div>
+          <div class="card card--video">
+            <div class="card__preview" style="background:linear-gradient(135deg,#001a10,#001a08);"><div class="card__preview-icon">🟩</div><div class="card__badge-row"><span class="badge badge--motion">Motion</span><span class="badge badge--new">New</span></div></div>
+            <div class="card__body"><div class="card__name">Green Screen Effects Pack</div><div class="card__desc">30 green screen VFX clips: explosions, portals, weather, animals. Ready to key out.</div><ul class="card__features"><li><span class="cf check">✓</span> 30 VFX clips</li><li><span class="cf check">✓</span> Clean green key</li><li><span class="cf check">✓</span> Full HD + 4K</li></ul></div>
+            <div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Sample</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div>
+          </div>
+          <div class="card card--video">
+            <div class="card__preview" style="background:linear-gradient(135deg,#0a0028,#100038);"><div class="card__preview-icon">🅰️</div><div class="card__badge-row"><span class="badge badge--motion">Motion</span></div></div>
+            <div class="card__body"><div class="card__name">Typography Animation Pack</div><div class="card__desc">45 kinetic typography templates. Word-by-word reveals, bouncy, typewriter, glitch. AE + CapCut.</div><ul class="card__features"><li><span class="cf check">✓</span> 45 text animations</li><li><span class="cf check">✓</span> Editable in AE</li><li><span class="cf check">✓</span> Hindi + English ready</li></ul></div>
+            <div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Sample</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-group">
+        <div class="sub-group__label">🎨 LUTs — Color Grading</div>
+        <div class="product-grid">
+          <div class="card card--video">
+            <div class="card__preview" style="background:linear-gradient(135deg,#1a2a1a,#0d2010);"><div class="card__preview-icon">🎬</div><div class="card__badge-row"><span class="badge badge--lut">LUT</span><span class="badge badge--hot">Hot</span></div></div>
+            <div class="card__body"><div class="card__name">Cinematic India Pack — 25 LUTs</div><div class="card__desc">25 LUTs for golden-hour Indian light. AE + DaVinci + FCP. Warm, filmic, cinematic. .cube format.</div><ul class="card__features"><li><span class="cf check">✓</span> 25 LUTs .cube</li><li><span class="cf check">✓</span> AE + DR + FCP</li><li><span class="cf check">✓</span> Commercial license</li></ul></div>
+            <div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Sample</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div>
+          </div>
+          <div class="card card--video card--ai">
+            <div class="card__preview" style="background:linear-gradient(135deg,#0a0a2e,#1a0a3a);"><div class="card__preview-icon">🌌</div><div class="card__badge-row"><span class="badge badge--lut">LUT</span><span class="badge badge--ai">AI Made</span></div></div>
+            <div class="card__body"><div class="card__name">Neon Noir — 20 AI LUTs</div><div class="card__desc">Cyberpunk-inspired LUTs for YouTube thumbnails, Reels, gaming content. Deep teals, electric blues.</div><ul class="card__features"><li><span class="cf check">✓</span> 20 LUTs multi-format</li><li><span class="cf check">✓</span> DR + Premiere + FCP</li><li><span class="cf check">✓</span> Intensity guide PDF</li></ul></div>
+            <div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Sample</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div>
+          </div>
+          <div class="card card--video">
+            <div class="card__preview" style="background:linear-gradient(135deg,#2a2000,#3d2800);"><div class="card__preview-icon">🎞️</div><div class="card__badge-row"><span class="badge badge--lut">LUT</span><span class="badge badge--hot">Best Seller</span></div></div>
+            <div class="card__body"><div class="card__name">Film Emulation Bundle — 50 LUTs</div><div class="card__desc">50 LUTs emulating Kodak, Fuji, Ilford, cross-process film stocks. .cube + .3dl + .look formats.</div><ul class="card__features"><li><span class="cf check">✓</span> 50 LUTs all formats</li><li><span class="cf check">✓</span> Lightroom bonus presets</li><li><span class="cf check">✓</span> Commercial use</li></ul></div>
+            <div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Sample</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div>
+          </div>
+          <div class="card card--video">
+            <div class="card__preview" style="background:linear-gradient(135deg,#1a0a10,#2a0a18);"><div class="card__preview-icon">🌸</div><div class="card__badge-row"><span class="badge badge--lut">LUT</span></div></div>
+            <div class="card__body"><div class="card__name">Moody Portrait LUTs — 15 LUTs</div><div class="card__desc">15 moody, desaturated portrait LUTs. Fashion, editorial, Instagram aesthetic. DR + Lightroom.</div><ul class="card__features"><li><span class="cf check">✓</span> 15 LUTs .cube</li><li><span class="cf check">✓</span> DR + Lightroom</li><li><span class="cf check">✓</span> Skin tone optimised</li></ul></div>
+            <div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Sample</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div>
+          </div>
+          <div class="card card--video">
+            <div class="card__preview" style="background:linear-gradient(135deg,#0a1a0a,#0a2010);"><div class="card__preview-icon">🌿</div><div class="card__badge-row"><span class="badge badge--lut">LUT</span><span class="badge badge--new">New</span></div></div>
+            <div class="card__body"><div class="card__name">Travel &amp; Nature LUTs — 20 LUTs</div><div class="card__desc">20 vibrant travel LUTs: lush greens, ocean blues, golden deserts. Perfect for travel vlogs.</div><ul class="card__features"><li><span class="cf check">✓</span> 20 LUTs .cube</li><li><span class="cf check">✓</span> AE + FCP + DR</li><li><span class="cf check">✓</span> Before/after PDF</li></ul></div>
+            <div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Sample</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div>
+          </div>
+          <div class="card card--video">
+            <div class="card__preview" style="background:linear-gradient(135deg,#1a1400,#2a1e00);"><div class="card__preview-icon">💛</div><div class="card__badge-row"><span class="badge badge--lut">LUT</span></div></div>
+            <div class="card__body"><div class="card__name">Wedding &amp; Golden Hour LUTs — 18 LUTs</div><div class="card__desc">18 warm, romantic LUTs for weddings and golden-hour shoots. Soft, glowy, film-like.</div><ul class="card__features"><li><span class="cf check">✓</span> 18 LUTs .cube + .3dl</li><li><span class="cf check">✓</span> All major NLEs</li><li><span class="cf check">✓</span> Lightroom presets bonus</li></ul></div>
+            <div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Sample</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-group">
+        <div class="sub-group__label">🎵 Royalty-Free Music — Digitruinx Audio</div>
+        <div class="product-grid">
+          <div class="card card--video">
+            <div class="card__preview" style="background:linear-gradient(135deg,#0d0a1e,#1a0a2e);"><div class="card__preview-icon">🎸</div><div class="card__badge-row"><span class="badge badge--music">Music</span><span class="badge badge--hot">Hot</span></div></div>
+            <div class="card__body"><div class="card__name">YouTube Creators Pack — 30 Tracks</div><div class="card__desc">30 background tracks for YouTube: intros, vlogs, cinematic, lo-fi, corporate. Full commercial license.</div><ul class="card__features"><li><span class="cf check">✓</span> 30 tracks .mp3 + .wav</li><li><span class="cf check">✓</span> YouTube safe</li><li><span class="cf check">✓</span> Loop + stem files</li></ul></div>
+            <div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Sample</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div>
+          </div>
+          <div class="card card--video card--ai">
+            <div class="card__preview" style="background:linear-gradient(135deg,#0a1a0a,#0d2d1a);"><div class="card__preview-icon">🧘</div><div class="card__badge-row"><span class="badge badge--music">Music</span><span class="badge badge--ai">AI Made</span></div></div>
+            <div class="card__body"><div class="card__name">Lo-Fi &amp; Chill Bundle — 50 Tracks</div><div class="card__desc">50 lo-fi, ambient, meditation tracks. Suno AI + GarageBand post-processed. Study, podcasts, Reels.</div><ul class="card__features"><li><span class="cf check">✓</span> 50 tracks + .wav masters</li><li><span class="cf check">✓</span> Streaming safe</li><li><span class="cf check">✓</span> Lifetime updates</li></ul></div>
+            <div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Sample</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div>
+          </div>
+          <div class="card card--video">
+            <div class="card__preview" style="background:linear-gradient(135deg,#1a0d00,#2d1a00);"><div class="card__preview-icon">🎺</div><div class="card__badge-row"><span class="badge badge--music">Music</span><span class="badge badge--new">New</span></div></div>
+            <div class="card__body"><div class="card__name">Indian Fusion Cinematic — 20 Tracks</div><div class="card__desc">20 original cinematic tracks blending Indian classical instruments with modern scoring. Documentary, travel, brand films.</div><ul class="card__features"><li><span class="cf check">✓</span> 20 tracks .mp3 + .wav</li><li><span class="cf check">✓</span> Film + ad commercial</li><li><span class="cf check">✓</span> BPM/key metadata</li></ul></div>
+            <div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Sample</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div>
+          </div>
+          <div class="card card--video">
+            <div class="card__preview" style="background:linear-gradient(135deg,#0a1428,#0d1a30);"><div class="card__preview-icon">📊</div><div class="card__badge-row"><span class="badge badge--music">Music</span></div></div>
+            <div class="card__body"><div class="card__name">Corporate &amp; Presentation Music — 25 Tracks</div><div class="card__desc">25 professional background tracks for presentations, explainer videos, corporate reels. Clean, modern, non-distracting.</div><ul class="card__features"><li><span class="cf check">✓</span> 25 tracks .mp3 + .wav</li><li><span class="cf check">✓</span> Broadcast license</li><li><span class="cf check">✓</span> 30/60/90s edits</li></ul></div>
+            <div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Sample</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div>
+          </div>
+          <div class="card card--video">
+            <div class="card__preview" style="background:linear-gradient(135deg,#1a0028,#220030);"><div class="card__preview-icon">🎮</div><div class="card__badge-row"><span class="badge badge--music">Music</span></div></div>
+            <div class="card__body"><div class="card__name">Gaming &amp; Action Tracks — 30 Tracks</div><div class="card__desc">30 high-energy gaming, action, and sports tracks. YouTube gaming channels, Twitch streams, montages.</div><ul class="card__features"><li><span class="cf check">✓</span> 30 tracks .mp3 + .wav</li><li><span class="cf check">✓</span> Loop versions included</li><li><span class="cf check">✓</span> Commercial license</li></ul></div>
+            <div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Sample</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div>
+          </div>
+          <div class="card card--video">
+            <div class="card__preview" style="background:linear-gradient(135deg,#001a18,#002020);"><div class="card__preview-icon">🎙️</div><div class="card__badge-row"><span class="badge badge--music">Music</span><span class="badge badge--new">New</span></div></div>
+            <div class="card__body"><div class="card__name">Podcast Intro Jingles — 15 Tracks</div><div class="card__desc">15 catchy podcast intro/outro jingles. 10–30 second loops. Upbeat, professional, memorable.</div><ul class="card__features"><li><span class="cf check">✓</span> 15 jingles .mp3 + .wav</li><li><span class="cf check">✓</span> 10/15/30s versions</li><li><span class="cf check">✓</span> Full podcast license</li></ul></div>
+            <div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Sample</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video Suite Pricing -->
+      <div class="cat-pricing">
+        <div class="cat-pricing__header"><div class="cat-pricing__title">🎬 VisualCraft Suite — Pricing</div><div class="cat-pricing__note">Buy individual packs or get everything in one bundle</div></div>
+        <div class="cat-pricing__tiers">
+          <div class="cat-pricing__tier"><div class="cat-pricing__tier-name cat-pricing__tier-name--free">Free Samples</div><div class="cat-pricing__tier-desc">3–5 files per pack · Watermarked / personal use only</div><div class="cat-pricing__tier-price cat-pricing__tier-price--free">₹0</div></div>
+          <div class="cat-pricing__tier"><div class="cat-pricing__tier-name cat-pricing__tier-name--pro">Individual Pack</div><div class="cat-pricing__tier-desc">Full pack · Commercial license · AE / DR / FCP compatible · Source files</div><div class="cat-pricing__tier-price cat-pricing__tier-price--pro">₹699 – ₹1,499 / pack</div></div>
+          <div class="cat-pricing__tier cat-pricing__tier--bundle"><div class="cat-pricing__tier-name cat-pricing__tier-name--bundle">Full VisualCraft Suite</div><div class="cat-pricing__tier-desc">All motion + LUTs + music packs · 300+ assets · Unlimited commercial · 1 year updates</div><div class="cat-pricing__tier-price cat-pricing__tier-price--bundle">₹4,999 / year</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ FONTS ═══ -->
+    <div class="cat-section" data-cat-group="fonts">
+      <div class="cat-section__header">
+        <div class="cat-section__title"><span class="cat-section__icon">🔤</span> Fonts <span class="cat-section__sub">— Digitruinx Foundry · 100% Original IP</span></div>
+        <a href="#" class="cat-section__link">View all →</a>
+      </div>
+      <div class="product-grid">
+        <div class="card card--font"><div class="card__preview" style="background:linear-gradient(135deg,#1a1a2e,#0d1b2e);"><span style="font-size:2.8rem;font-weight:900;letter-spacing:-2px;color:#fbbf24;font-family:Georgia,serif;">Aa</span><div class="card__badge-row"><span class="badge badge--font">Font</span><span class="badge badge--hot">Best Seller</span></div></div><div class="card__body"><div class="card__name">Luxora Display — Curvy Serif Family</div><div class="card__desc">Chunky juicy serifs for bold branding. 5 weights: Light, Regular, Bold, Extra Bold, Italic.</div><ul class="card__features"><li><span class="cf check">✓</span> 5 weights .ttf + .otf + .woff2</li><li><span class="cf check">✓</span> Full commercial license</li><li><span class="cf check">✓</span> Specimen PDF</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Weight</a><a href="#" class="btn btn--gold btn--sm">Get Family</a></div></div>
+
+        <div class="card card--font"><div class="card__preview" style="background:linear-gradient(135deg,#0a0f1e,#1a1040);"><span style="font-size:2.2rem;font-weight:300;letter-spacing:6px;color:#e2e8f0;">NOVA</span><div class="card__badge-row"><span class="badge badge--font">Font</span><span class="badge badge--new">New</span></div></div><div class="card__body"><div class="card__name">Novatek Sans — Quiet Luxury Sans-Serif</div><div class="card__desc">Ultra-clean geometric sans for SaaS, luxury packaging, editorial. Variable weight axis Thin to Black.</div><ul class="card__features"><li><span class="cf check">✓</span> 5 weights + Variable .ttf</li><li><span class="cf check">✓</span> Web WOFF2 included</li><li><span class="cf check">✓</span> Extended commercial</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Weight</a><a href="#" class="btn btn--gold btn--sm">Get Family</a></div></div>
+
+        <div class="card card--font"><div class="card__preview" style="background:linear-gradient(135deg,#1a0a0a,#2d1010);"><span style="font-size:2.5rem;font-weight:800;color:#f472b6;transform:skewX(-8deg);display:inline-block;">CHAOS</span><div class="card__badge-row"><span class="badge badge--font">Font</span></div></div><div class="card__body"><div class="card__name">Grunge Script Bundle — 10 Fonts</div><div class="card__desc">Chaotic scrawly handwritten fonts. 90s skate culture inspired. Streetwear, social content, merch.</div><ul class="card__features"><li><span class="cf check">✓</span> 10 unique fonts .ttf + .otf</li><li><span class="cf check">✓</span> Full commercial license</li><li><span class="cf check">✓</span> Social media specimen</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Sample</a><a href="#" class="btn btn--gold btn--sm">Get Bundle</a></div></div>
+
+        <div class="card card--font"><div class="card__preview" style="background:linear-gradient(135deg,#0a1a14,#0d2018);"><span style="font-size:2.4rem;font-weight:700;color:#1dd1a1;letter-spacing:1px;">Cozy</span><div class="card__badge-row"><span class="badge badge--font">Font</span></div></div><div class="card__body"><div class="card__name">Cozy Rounded Display Family</div><div class="card__desc">Warm, friendly rounded letterforms. Food branding, kids content, wellness brands. 5 weights.</div><ul class="card__features"><li><span class="cf check">✓</span> 5 weights all formats</li><li><span class="cf check">✓</span> Full commercial license</li><li><span class="cf check">✓</span> Alternate glyphs</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Weight</a><a href="#" class="btn btn--gold btn--sm">Get Family</a></div></div>
+
+        <div class="card card--font"><div class="card__preview" style="background:linear-gradient(135deg,#0f0f0f,#1a1a1a);"><span style="font-size:2rem;font-weight:900;color:#e2e8f0;letter-spacing:2px;font-family:monospace;">GRID</span><div class="card__badge-row"><span class="badge badge--font">Font</span><span class="badge badge--new">New</span></div></div><div class="card__body"><div class="card__name">Brutalist Grid Font Pack — 8 Fonts</div><div class="card__desc">Raw, angular, grid-based display fonts for bold editorial, posters, streetwear graphics.</div><ul class="card__features"><li><span class="cf check">✓</span> 8 unique fonts</li><li><span class="cf check">✓</span> .ttf + .otf</li><li><span class="cf check">✓</span> Commercial license</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Sample</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div></div>
+
+        <div class="card card--font"><div class="card__preview" style="background:linear-gradient(135deg,#1a0d00,#2a1500);"><span style="font-size:2rem;font-weight:600;color:#b8973a;font-family:serif;letter-spacing:3px;">RETRO</span><div class="card__badge-row"><span class="badge badge--font">Font</span></div></div><div class="card__body"><div class="card__name">Retro Tech Serif Collection</div><div class="card__desc">Vintage tech-meets-serif fonts. 70s/80s computer aesthetic. Posters, merchandise, brand identity.</div><ul class="card__features"><li><span class="cf check">✓</span> 6 fonts all formats</li><li><span class="cf check">✓</span> Full commercial license</li><li><span class="cf check">✓</span> Poster specimen</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Sample</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div></div>
+
+        <div class="card card--font"><div class="card__preview" style="background:linear-gradient(135deg,#001028,#001a30);"><span style="font-size:2rem;font-weight:500;color:#a855f7;">अ A</span><div class="card__badge-row"><span class="badge badge--font">Font</span><span class="badge badge--hot">Unique</span></div></div><div class="card__body"><div class="card__name">Indian-Latin Hybrid Script</div><div class="card__desc">Pioneering bilingual font: Devanagari + Latin characters in matching visual style. Brand logos, packaging.</div><ul class="card__features"><li><span class="cf check">✓</span> Devanagari + Latin glyphs</li><li><span class="cf check">✓</span> 3 weights .ttf + .otf</li><li><span class="cf check">✓</span> Extended commercial</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Weight</a><a href="#" class="btn btn--gold btn--sm">Get Family</a></div></div>
+
+        <div class="card card--font"><div class="card__preview" style="background:linear-gradient(135deg,#0a1428,#0d1a30);"><span style="font-size:2rem;font-weight:400;color:#94a3b8;letter-spacing:4px;">UI SYS</span><div class="card__badge-row"><span class="badge badge--font">Font</span></div></div><div class="card__body"><div class="card__name">Minimal UI System Font Family</div><div class="card__desc">Designed for interfaces, dashboards, SaaS products. Ultra-readable at small sizes. 7 weights.</div><ul class="card__features"><li><span class="cf check">✓</span> 7 weights all formats</li><li><span class="cf check">✓</span> Variable font axis</li><li><span class="cf check">✓</span> App + web license</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Weight</a><a href="#" class="btn btn--gold btn--sm">Get Family</a></div></div>
+
+        <div class="card card--font"><div class="card__preview" style="background:linear-gradient(135deg,#1a0a1a,#2a1028);"><span style="font-size:2.5rem;font-weight:900;color:#ec4899;">BIG</span><div class="card__badge-row"><span class="badge badge--font">Font</span></div></div><div class="card__body"><div class="card__name">Bold Display Headline Pack — 15 Fonts</div><div class="card__desc">15 powerful headline fonts for YouTube thumbnails, ads, social media. Impact-level boldness.</div><ul class="card__features"><li><span class="cf check">✓</span> 15 fonts .ttf + .otf</li><li><span class="cf check">✓</span> Commercial license</li><li><span class="cf check">✓</span> Thumbnail specimen pack</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Sample</a><a href="#" class="btn btn--gold btn--sm">Get Bundle</a></div></div>
+
+        <div class="card card--font"><div class="card__preview" style="background:linear-gradient(135deg,#001a14,#002018);"><span style="font-size:2rem;font-weight:400;color:#1dd1a1;font-style:italic;font-family:cursive;">Script</span><div class="card__badge-row"><span class="badge badge--font">Font</span><span class="badge badge--new">New</span></div></div><div class="card__body"><div class="card__name">Script &amp; Calligraphy Bundle — 12 Fonts</div><div class="card__desc">12 elegant script and calligraphy fonts. Wedding invites, branding, logos, certificates.</div><ul class="card__features"><li><span class="cf check">✓</span> 12 fonts all formats</li><li><span class="cf check">✓</span> OpenType features</li><li><span class="cf check">✓</span> Commercial license</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Sample</a><a href="#" class="btn btn--gold btn--sm">Get Bundle</a></div></div>
+
+        <div class="card card--font"><div class="card__preview" style="background:linear-gradient(135deg,#0a0a1e,#10102e);"><span style="font-size:2rem;color:#00bcd4;">★ ◆ ▲</span><div class="card__badge-row"><span class="badge badge--font">Font</span></div></div><div class="card__body"><div class="card__name">Geometric Icon Dingbats Font</div><div class="card__desc">600+ geometric icons, arrows, symbols as a single font file. Use anywhere fonts work — CSS, Office, etc.</div><ul class="card__features"><li><span class="cf check">✓</span> 600+ glyphs .ttf + .otf</li><li><span class="cf check">✓</span> CSS icon class sheet</li><li><span class="cf check">✓</span> Commercial license</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Sample</a><a href="#" class="btn btn--gold btn--sm">Get Font</a></div></div>
+
+        <div class="card card--font"><div class="card__preview" style="background:linear-gradient(135deg,#100a28,#1a0a38);"><span style="font-size:2rem;font-weight:800;color:#a855f7;letter-spacing:-1px;">Var</span><div class="card__badge-row"><span class="badge badge--font">Font</span><span class="badge badge--ai">AI Built</span></div></div><div class="card__body"><div class="card__name">Variable Weight Experimental Font</div><div class="card__desc">Single variable font with weight, width, and optical size axes. True type variable. For advanced designers.</div><ul class="card__features"><li><span class="cf check">✓</span> Variable .ttf + WOFF2</li><li><span class="cf check">✓</span> 3 variable axes</li><li><span class="cf check">✓</span> Extended commercial</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Weight</a><a href="#" class="btn btn--gold btn--sm">Get Family</a></div></div>
+      </div>
+      <!-- Fonts Pricing -->
+      <div class="cat-pricing">
+        <div class="cat-pricing__header"><div class="cat-pricing__title">🔤 Fonts — Pricing</div><div class="cat-pricing__note">Digitruinx Foundry · 100% original IP · Full commercial ownership</div></div>
+        <div class="cat-pricing__tiers">
+          <div class="cat-pricing__tier"><div class="cat-pricing__tier-name cat-pricing__tier-name--free">Free (Regular Weight)</div><div class="cat-pricing__tier-desc">1 weight per family · Personal use only · .ttf format</div><div class="cat-pricing__tier-price cat-pricing__tier-price--free">₹0</div></div>
+          <div class="cat-pricing__tier"><div class="cat-pricing__tier-name cat-pricing__tier-name--pro">Pro Font Family</div><div class="cat-pricing__tier-desc">All 5 weights · .ttf + .otf + .woff2 · Full commercial license · Specimen PDF</div><div class="cat-pricing__tier-price cat-pricing__tier-price--pro">₹599 – ₹1,199 / family</div></div>
+          <div class="cat-pricing__tier cat-pricing__tier--bundle"><div class="cat-pricing__tier-name cat-pricing__tier-name--bundle">All Fonts Bundle</div><div class="cat-pricing__tier-desc">All 100+ font families · Unlimited commercial use · Foundry license · Future fonts included</div><div class="cat-pricing__tier-price cat-pricing__tier-price--bundle">₹5,999 one-time</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ AI SUITE ═══ -->
     <div class="cat-section" data-cat-group="ai">
       <div class="cat-section__header">
-        <div class="cat-section__title"><span class="cat-section__icon">🤖</span> AI Agents</div>
+        <div class="cat-section__title"><span class="cat-section__icon">🤖</span> AI Suite <span class="cat-section__sub">— Agents (one-time) + Workflows (subscription)</span></div>
         <a href="#" class="cat-section__link">View all →</a>
       </div>
-      <div class="featured-strip">
-        <div class="featured-card" style="border-color:rgba(168,85,247,0.3);background:linear-gradient(135deg,rgba(168,85,247,0.05) 0%,var(--surface) 60%);">
-          <div class="featured-card__icon">🤖</div>
-          <div>
-            <div class="featured-card__title">DGT Master Orchestrator Agent</div>
-            <div class="featured-card__desc">The flagship AI agent that plans, delegates, and executes across all 106 Digitruinx agents. Handles content, research, code, and strategy autonomously. Built on Claude Opus.</div>
-            <div class="featured-card__meta">
-              <span class="badge badge--ai">AI Agent</span>
-              <span class="badge badge--hot">Flagship</span>
-              <div class="featured-card__price">₹4,999</div>
-              <div class="featured-card__free">Free demo available</div>
-            </div>
-          </div>
-        </div>
-        <div class="featured-card" style="border-color:rgba(29,209,161,0.25);">
-          <div class="featured-card__icon">📹</div>
-          <div>
-            <div class="featured-card__title">YouTube Automation Agent Bundle</div>
-            <div class="featured-card__desc">10 agents covering scriptwriting, thumbnail briefs, SEO titles, Shorts strategy, and publish scheduling. Works for any niche in Hindi or English.</div>
-            <div class="featured-card__meta">
-              <span class="badge badge--ai">AI Bundle</span>
-              <span class="badge badge--new">New</span>
-              <div class="featured-card__price">₹2,499</div>
-              <div class="featured-card__free">Free starter included</div>
-            </div>
-          </div>
+
+      <div class="sub-group">
+        <div class="sub-group__label sub-group__label--agents">🤖 AI Agents — One-Time Purchase</div>
+        <div class="product-grid">
+          <div class="card card--ai"><div class="card__preview" style="background:linear-gradient(135deg,#0a0010,#1a0a2e);"><div class="card__preview-icon">🧠</div><div class="card__badge-row"><span class="badge badge--ai">Flagship</span><span class="badge badge--hot">Best</span></div><div class="card__ribbon card__ribbon--ai">FLAGSHIP</div></div><div class="card__body"><div class="card__name">Master Orchestrator Agent</div><div class="card__desc">Plans, delegates, and executes across all 106 Digitruinx agents. Built on Claude Opus. Autonomous operation.</div><ul class="card__features"><li><span class="cf check">✓</span> 106 sub-agents connected</li><li><span class="cf check">✓</span> Claude Opus powered</li><li><span class="cf check">✓</span> Full task autonomy</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Demo</a><a href="#" class="btn btn--gold btn--sm">Get Agent</a></div></div>
+
+          <div class="card card--ai"><div class="card__preview" style="background:linear-gradient(135deg,#001018,#0a0f1e);"><div class="card__preview-icon">📹</div><div class="card__badge-row"><span class="badge badge--ai">Bundle</span><span class="badge badge--hot">Popular</span></div></div><div class="card__body"><div class="card__name">YouTube Automation Bundle — 10 Agents</div><div class="card__desc">Script, thumbnail brief, SEO titles, Shorts strategy, publish schedule. Hindi + English. Any niche.</div><ul class="card__features"><li><span class="cf check">✓</span> 10 specialized agents</li><li><span class="cf check">✓</span> Hindi + English</li><li><span class="cf check">✓</span> All niches covered</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Demo</a><a href="#" class="btn btn--gold btn--sm">Get Bundle</a></div></div>
+
+          <div class="card card--ai"><div class="card__preview" style="background:linear-gradient(135deg,#0a0010,#1a003a);"><div class="card__preview-icon">✍️</div><div class="card__badge-row"><span class="badge badge--ai">Agent</span></div></div><div class="card__body"><div class="card__name">Content Writer Agent</div><div class="card__desc">Blogs, captions, email sequences, ad copy. Any niche, Hindi or English, SEO output built in.</div><ul class="card__features"><li><span class="cf check">✓</span> 12 content types</li><li><span class="cf check">✓</span> Hindi + English</li><li><span class="cf check">✓</span> SEO + meta output</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Try Free</a><a href="#" class="btn btn--gold btn--sm">Get Agent</a></div></div>
+
+          <div class="card card--ai"><div class="card__preview" style="background:linear-gradient(135deg,#001018,#0a1020);"><div class="card__preview-icon">🔍</div><div class="card__badge-row"><span class="badge badge--ai">Agent</span></div></div><div class="card__body"><div class="card__name">Research &amp; Summariser Agent</div><div class="card__desc">URLs, PDFs, topics → structured summaries, key points, competitor analysis. Presentation-ready.</div><ul class="card__features"><li><span class="cf check">✓</span> URL + PDF + topic input</li><li><span class="cf check">✓</span> Competitor mode</li><li><span class="cf check">✓</span> Export to Notion</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Try Free</a><a href="#" class="btn btn--gold btn--sm">Get Agent</a></div></div>
+
+          <div class="card card--ai"><div class="card__preview" style="background:linear-gradient(135deg,#0a0010,#1a003a);"><div class="card__preview-icon">🛒</div><div class="card__badge-row"><span class="badge badge--ai">Agent</span><span class="badge badge--new">New</span></div></div><div class="card__body"><div class="card__name">E-commerce Listing Agent</div><div class="card__desc">Product brief → SEO titles, bullet points, descriptions, keyword tags. Amazon, Flipkart, own store.</div><ul class="card__features"><li><span class="cf check">✓</span> Unlimited products</li><li><span class="cf check">✓</span> Bulk CSV export</li><li><span class="cf check">✓</span> Platform presets</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Try Free</a><a href="#" class="btn btn--gold btn--sm">Get Agent</a></div></div>
+
+          <div class="card card--ai"><div class="card__preview" style="background:linear-gradient(135deg,#001428,#001830);"><div class="card__preview-icon">📣</div><div class="card__badge-row"><span class="badge badge--ai">Agent</span></div></div><div class="card__body"><div class="card__name">Social Media Manager Agent</div><div class="card__desc">Generates 30-day content calendars, captions, hashtags, posting schedules for all platforms.</div><ul class="card__features"><li><span class="cf check">✓</span> 30-day calendar</li><li><span class="cf check">✓</span> All platforms</li><li><span class="cf check">✓</span> Hashtag research</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Try Free</a><a href="#" class="btn btn--gold btn--sm">Get Agent</a></div></div>
+
+          <div class="card card--ai"><div class="card__preview" style="background:linear-gradient(135deg,#0a1800,#102200);"><div class="card__preview-icon">📈</div><div class="card__badge-row"><span class="badge badge--ai">Agent</span></div></div><div class="card__body"><div class="card__name">SEO Audit &amp; Keyword Agent</div><div class="card__desc">Full SEO audit for any website or page. Keyword research, competitor gap analysis, meta suggestions.</div><ul class="card__features"><li><span class="cf check">✓</span> Full site audit</li><li><span class="cf check">✓</span> Keyword gap analysis</li><li><span class="cf check">✓</span> Meta + schema output</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Try Free</a><a href="#" class="btn btn--gold btn--sm">Get Agent</a></div></div>
+
+          <div class="card card--ai"><div class="card__preview" style="background:linear-gradient(135deg,#100020,#1a0030);"><div class="card__preview-icon">📧</div><div class="card__badge-row"><span class="badge badge--ai">Agent</span></div></div><div class="card__body"><div class="card__name">Email Marketing Agent</div><div class="card__desc">Full email sequence generator: welcome series, launch sequences, abandoned cart, re-engagement.</div><ul class="card__features"><li><span class="cf check">✓</span> 10+ sequence types</li><li><span class="cf check">✓</span> Subject line A/B</li><li><span class="cf check">✓</span> Export to Mailchimp / Brevo</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Try Free</a><a href="#" class="btn btn--gold btn--sm">Get Agent</a></div></div>
+
+          <div class="card card--ai"><div class="card__preview" style="background:linear-gradient(135deg,#001a10,#002018);"><div class="card__preview-icon">🎯</div><div class="card__badge-row"><span class="badge badge--ai">Agent</span><span class="badge badge--new">New</span></div></div><div class="card__body"><div class="card__name">Lead Generation Agent</div><div class="card__desc">Builds targeted prospect lists, LinkedIn outreach messages, cold email sequences, CRM-ready CSV output.</div><ul class="card__features"><li><span class="cf check">✓</span> Prospect list builder</li><li><span class="cf check">✓</span> LinkedIn + email outreach</li><li><span class="cf check">✓</span> CRM CSV export</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Try Free</a><a href="#" class="btn btn--gold btn--sm">Get Agent</a></div></div>
+
+          <div class="card card--ai"><div class="card__preview" style="background:linear-gradient(135deg,#001428,#001a30);"><div class="card__preview-icon">💬</div><div class="card__badge-row"><span class="badge badge--ai">Agent</span></div></div><div class="card__body"><div class="card__name">Customer Support Bot Agent</div><div class="card__desc">Train on your product docs → deploy as support bot. WhatsApp + website widget. Auto-escalation.</div><ul class="card__features"><li><span class="cf check">✓</span> Custom knowledge base</li><li><span class="cf check">✓</span> WhatsApp + web widget</li><li><span class="cf check">✓</span> Auto-escalation rules</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Demo</a><a href="#" class="btn btn--gold btn--sm">Get Agent</a></div></div>
+
+          <div class="card card--ai"><div class="card__preview" style="background:linear-gradient(135deg,#1a1000,#2a1800);"><div class="card__preview-icon">📊</div><div class="card__badge-row"><span class="badge badge--ai">Agent</span></div></div><div class="card__body"><div class="card__name">Data Scraper &amp; Analyst Agent</div><div class="card__desc">Scrapes websites, processes spreadsheets, generates charts and summary reports. No-code required.</div><ul class="card__features"><li><span class="cf check">✓</span> Web + CSV scraping</li><li><span class="cf check">✓</span> Chart generation</li><li><span class="cf check">✓</span> Summary reports</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Demo</a><a href="#" class="btn btn--gold btn--sm">Get Agent</a></div></div>
+
+          <div class="card card--ai"><div class="card__preview" style="background:linear-gradient(135deg,#0a1800,#102400);"><div class="card__preview-icon">🧾</div><div class="card__badge-row"><span class="badge badge--ai">Agent</span><span class="badge badge--new">New</span></div></div><div class="card__body"><div class="card__name">Invoice &amp; Finance Agent</div><div class="card__desc">Generates GST-compliant invoices, expense reports, P&amp;L summaries. Tally and Excel compatible output.</div><ul class="card__features"><li><span class="cf check">✓</span> GST-compliant invoices</li><li><span class="cf check">✓</span> P&amp;L + expense reports</li><li><span class="cf check">✓</span> Tally + Excel export</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Demo</a><a href="#" class="btn btn--gold btn--sm">Get Agent</a></div></div>
         </div>
       </div>
-      <div class="product-grid">
 
-        <div class="card card--ai">
-          <div class="card__preview" style="background:linear-gradient(135deg,#0a0010,#1a0a2e);">
-            <div class="card__preview-icon">✍️</div>
-            <div class="card__badge-row"><span class="badge badge--ai">AI Agent</span></div>
-          </div>
-          <div class="card__body">
-            <div class="card__name">Content Writer Agent</div>
-            <div class="card__desc">Long-form blogs, social captions, email sequences, and ad copy — any niche, Hindi or English, with SEO output built in.</div>
-            <div class="tier">
-              <div class="tier__col tier__col--free">
-                <div class="tier__label">Free</div>
-                <div class="tier__item"><span class="i check">✓</span> 3 content types</div>
-                <div class="tier__item"><span class="i check">✓</span> English output</div>
-                <div class="tier__item"><span class="i check">✓</span> 500 words/run</div>
-                <div class="tier__item"><span class="i cross">✗</span> <span class="locked">Hindi / bilingual</span></div>
-              </div>
-              <div class="tier__col tier__col--pro">
-                <div class="tier__label">Pro</div>
-                <div class="tier__item"><span class="i check">✓</span> 12 content types</div>
-                <div class="tier__item"><span class="i lock">★</span> Hindi + English</div>
-                <div class="tier__item"><span class="i lock">★</span> Unlimited length</div>
-                <div class="tier__item"><span class="i lock">★</span> SEO + meta output</div>
-              </div>
-            </div>
-            <div class="price-row">
-              <div class="price-row__block"><span class="price-row__label">Free</span><span class="price-row__value price-row__value--free">₹0</span></div>
-              <div class="price-row__divider"></div>
-              <div class="price-row__block"><span class="price-row__label">Pro (one-time)</span><span class="price-row__value price-row__value--pro">₹999</span></div>
-            </div>
-          </div>
-          <div class="card__actions">
-            <a href="#" class="btn btn--outline btn--sm">Try Free</a>
-            <a href="#" class="btn btn--gold btn--sm">Buy Pro ₹999</a>
-          </div>
+      <div class="sub-group">
+        <div class="sub-group__label sub-group__label--workflows">⚙️ AI Workflows — Subscription (₹299–₹999/month)</div>
+        <div class="product-grid">
+          <div class="card card--ai"><div class="card__preview" style="background:linear-gradient(135deg,#001828,#002030);"><div class="card__preview-icon">🔄</div><div class="card__badge-row"><span class="badge badge--ai">Workflow</span><span class="badge badge--hot">Popular</span></div></div><div class="card__body"><div class="card__name">Content Pipeline Workflow</div><div class="card__desc">Blog → social → email in one automated flow. Write once, distribute everywhere. Weekly scheduler.</div><ul class="card__features"><li><span class="cf check">✓</span> Blog → social → email</li><li><span class="cf check">✓</span> Weekly auto-schedule</li><li><span class="cf check">✓</span> 6 platform outputs</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Try Free</a><a href="#" class="btn btn--gold btn--sm">Subscribe</a></div></div>
+
+          <div class="card card--ai"><div class="card__preview" style="background:linear-gradient(135deg,#0a0018,#150028);"><div class="card__preview-icon">📺</div><div class="card__badge-row"><span class="badge badge--ai">Workflow</span></div></div><div class="card__body"><div class="card__name">YouTube Channel Workflow</div><div class="card__desc">Idea → script → thumbnail brief → SEO upload package. Full end-to-end for every video.</div><ul class="card__features"><li><span class="cf check">✓</span> Full video pipeline</li><li><span class="cf check">✓</span> Thumbnail brief output</li><li><span class="cf check">✓</span> SEO upload package</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Try Free</a><a href="#" class="btn btn--gold btn--sm">Subscribe</a></div></div>
+
+          <div class="card card--ai"><div class="card__preview" style="background:linear-gradient(135deg,#001818,#002020);"><div class="card__preview-icon">🛒</div><div class="card__badge-row"><span class="badge badge--ai">Workflow</span><span class="badge badge--new">New</span></div></div><div class="card__body"><div class="card__name">E-commerce Automation Workflow</div><div class="card__desc">Product listings → inventory alerts → promo emails → social posts. Connect to Shopify or WooCommerce.</div><ul class="card__features"><li><span class="cf check">✓</span> Shopify + WooCommerce</li><li><span class="cf check">✓</span> Inventory alerts</li><li><span class="cf check">✓</span> Promo email automation</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Try Free</a><a href="#" class="btn btn--gold btn--sm">Subscribe</a></div></div>
+
+          <div class="card card--ai"><div class="card__preview" style="background:linear-gradient(135deg,#001428,#001e30);"><div class="card__preview-icon">👥</div><div class="card__badge-row"><span class="badge badge--ai">Workflow</span></div></div><div class="card__body"><div class="card__name">HR &amp; Recruitment Workflow</div><div class="card__desc">JD writer → resume screener → interview question generator → offer letter. Full HR pipeline.</div><ul class="card__features"><li><span class="cf check">✓</span> JD + resume screening</li><li><span class="cf check">✓</span> Interview Q generator</li><li><span class="cf check">✓</span> Offer letter templates</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Demo</a><a href="#" class="btn btn--gold btn--sm">Subscribe</a></div></div>
+
+          <div class="card card--ai"><div class="card__preview" style="background:linear-gradient(135deg,#0a1400,#121e00);"><div class="card__preview-icon">⚖️</div><div class="card__badge-row"><span class="badge badge--ai">Workflow</span></div></div><div class="card__body"><div class="card__name">Legal Document Workflow</div><div class="card__desc">NDA, service agreements, privacy policies, terms & conditions — auto-generated and customizable.</div><ul class="card__features"><li><span class="cf check">✓</span> 20+ document types</li><li><span class="cf check">✓</span> Indian law compliant</li><li><span class="cf check">✓</span> Word + PDF output</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Demo</a><a href="#" class="btn btn--gold btn--sm">Subscribe</a></div></div>
+
+          <div class="card card--ai"><div class="card__preview" style="background:linear-gradient(135deg,#1a1000,#261800);"><div class="card__preview-icon">💰</div><div class="card__badge-row"><span class="badge badge--ai">Workflow</span><span class="badge badge--new">New</span></div></div><div class="card__body"><div class="card__name">Finance &amp; Reporting Workflow</div><div class="card__desc">Monthly P&L, MIS reports, expense summaries auto-generated from your data input. Board-ready slides.</div><ul class="card__features"><li><span class="cf check">✓</span> P&L + MIS automation</li><li><span class="cf check">✓</span> Board-ready slides</li><li><span class="cf check">✓</span> Excel + PDF output</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Demo</a><a href="#" class="btn btn--gold btn--sm">Subscribe</a></div></div>
+
+          <div class="card card--ai"><div class="card__preview" style="background:linear-gradient(135deg,#100028,#180030);"><div class="card__preview-icon">📅</div><div class="card__badge-row"><span class="badge badge--ai">Workflow</span></div></div><div class="card__body"><div class="card__name">Social Media Scheduler Workflow</div><div class="card__desc">AI writes + schedules posts across Instagram, LinkedIn, X, Facebook automatically. Calendar view.</div><ul class="card__features"><li><span class="cf check">✓</span> 4 platforms auto-post</li><li><span class="cf check">✓</span> AI content generation</li><li><span class="cf check">✓</span> Calendar view dashboard</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Demo</a><a href="#" class="btn btn--gold btn--sm">Subscribe</a></div></div>
+
+          <div class="card card--ai"><div class="card__preview" style="background:linear-gradient(135deg,#001828,#002030);"><div class="card__preview-icon">🎯</div><div class="card__badge-row"><span class="badge badge--ai">Workflow</span></div></div><div class="card__body"><div class="card__name">Lead Nurture Workflow</div><div class="card__desc">Lead captures → automated email sequences → WhatsApp follow-ups → CRM updates. Zero manual work.</div><ul class="card__features"><li><span class="cf check">✓</span> Email + WhatsApp nurture</li><li><span class="cf check">✓</span> CRM auto-update</li><li><span class="cf check">✓</span> Conversion tracking</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Demo</a><a href="#" class="btn btn--gold btn--sm">Subscribe</a></div></div>
         </div>
+      </div>
 
-        <div class="card card--ai">
-          <div class="card__preview" style="background:linear-gradient(135deg,#001018,#0a0f1e);">
-            <div class="card__preview-icon">🔍</div>
-            <div class="card__badge-row"><span class="badge badge--ai">AI Agent</span></div>
-          </div>
-          <div class="card__body">
-            <div class="card__name">Research &amp; Summariser Agent</div>
-            <div class="card__desc">Feeds on URLs, PDFs, and topics — outputs structured summaries, key points, and competitor analysis ready for presentations or scripts.</div>
-            <div class="tier">
-              <div class="tier__col tier__col--free">
-                <div class="tier__label">Free</div>
-                <div class="tier__item"><span class="i check">✓</span> URL input</div>
-                <div class="tier__item"><span class="i check">✓</span> Basic summary</div>
-                <div class="tier__item"><span class="i cross">✗</span> <span class="locked">PDF input</span></div>
-                <div class="tier__item"><span class="i cross">✗</span> <span class="locked">Competitor mode</span></div>
-              </div>
-              <div class="tier__col tier__col--pro">
-                <div class="tier__label">Pro</div>
-                <div class="tier__item"><span class="i check">✓</span> URL + PDF + topic</div>
-                <div class="tier__item"><span class="i lock">★</span> Deep analysis</div>
-                <div class="tier__item"><span class="i lock">★</span> Competitor mode</div>
-                <div class="tier__item"><span class="i lock">★</span> Export to Notion</div>
-              </div>
-            </div>
-            <div class="price-row">
-              <div class="price-row__block"><span class="price-row__label">Free</span><span class="price-row__value price-row__value--free">₹0</span></div>
-              <div class="price-row__divider"></div>
-              <div class="price-row__block"><span class="price-row__label">Pro (one-time)</span><span class="price-row__value price-row__value--pro">₹1,499</span></div>
-            </div>
-          </div>
-          <div class="card__actions">
-            <a href="#" class="btn btn--outline btn--sm">Try Free</a>
-            <a href="#" class="btn btn--gold btn--sm">Buy Pro ₹1,499</a>
-          </div>
+      <!-- AI Suite Pricing -->
+      <div class="cat-pricing">
+        <div class="cat-pricing__header"><div class="cat-pricing__title">🤖 AI Suite — Pricing</div><div class="cat-pricing__note">Agents = one-time · Workflows = monthly subscription · Different billing models</div></div>
+        <div class="cat-pricing__tiers">
+          <div class="cat-pricing__tier"><div class="cat-pricing__tier-name cat-pricing__tier-name--free">Free Trial</div><div class="cat-pricing__tier-desc">3 agent runs/day · 1 workflow run/week · Basic features only</div><div class="cat-pricing__tier-price cat-pricing__tier-price--free">₹0</div></div>
+          <div class="cat-pricing__tier"><div class="cat-pricing__tier-name cat-pricing__tier-name--pro">AI Agents — One-Time</div><div class="cat-pricing__tier-desc">Buy any agent individually · Lifetime access · All Pro features · Free updates for 1 year</div><div class="cat-pricing__tier-price cat-pricing__tier-price--pro">₹999 – ₹4,999 each</div></div>
+          <div class="cat-pricing__tier"><div class="cat-pricing__tier-name cat-pricing__tier-name--pro">AI Workflows — Monthly</div><div class="cat-pricing__tier-desc">Subscribe to individual workflows · Cancel anytime · Includes execution credits</div><div class="cat-pricing__tier-price cat-pricing__tier-price--pro">₹299 – ₹999 / month</div></div>
+          <div class="cat-pricing__tier cat-pricing__tier--bundle"><div class="cat-pricing__tier-name cat-pricing__tier-name--bundle">Full AI Suite Bundle</div><div class="cat-pricing__tier-desc">All 12 agents (one-time) + all 8 workflows (monthly) · Priority support · Custom training</div><div class="cat-pricing__tier-price cat-pricing__tier-price--bundle">₹1,999 / month</div></div>
         </div>
-
-        <div class="card card--ai">
-          <div class="card__preview" style="background:linear-gradient(135deg,#0a0010,#1a003a);">
-            <div class="card__preview-icon">🛒</div>
-            <div class="card__badge-row"><span class="badge badge--ai">AI Agent</span><span class="badge badge--new">New</span></div>
-          </div>
-          <div class="card__body">
-            <div class="card__name">E-commerce Product Listing Agent</div>
-            <div class="card__desc">Upload a product brief — get SEO titles, bullet points, descriptions, and keyword tags ready for Amazon, Flipkart, or your own store.</div>
-            <div class="tier">
-              <div class="tier__col tier__col--free">
-                <div class="tier__label">Free</div>
-                <div class="tier__item"><span class="i check">✓</span> 5 products/day</div>
-                <div class="tier__item"><span class="i check">✓</span> Title + description</div>
-                <div class="tier__item"><span class="i cross">✗</span> <span class="locked">Bulk CSV mode</span></div>
-                <div class="tier__item"><span class="i cross">✗</span> <span class="locked">Platform presets</span></div>
-              </div>
-              <div class="tier__col tier__col--pro">
-                <div class="tier__label">Pro</div>
-                <div class="tier__item"><span class="i check">✓</span> Unlimited products</div>
-                <div class="tier__item"><span class="i lock">★</span> Bulk CSV export</div>
-                <div class="tier__item"><span class="i lock">★</span> Amazon / Flipkart presets</div>
-                <div class="tier__item"><span class="i lock">★</span> Keyword research</div>
-              </div>
-            </div>
-            <div class="price-row">
-              <div class="price-row__block"><span class="price-row__label">Free</span><span class="price-row__value price-row__value--free">₹0</span></div>
-              <div class="price-row__divider"></div>
-              <div class="price-row__block"><span class="price-row__label">Pro (one-time)</span><span class="price-row__value price-row__value--pro">₹1,999</span></div>
-            </div>
-          </div>
-          <div class="card__actions">
-            <a href="#" class="btn btn--outline btn--sm">Try Free</a>
-            <a href="#" class="btn btn--gold btn--sm">Buy Pro ₹1,999</a>
-          </div>
-        </div>
-
       </div>
     </div>
 
-    <!-- Motion Graphics -->
-    <div class="cat-section" data-cat-group="motion">
+    <!-- ═══ EDU & EXAM ═══ -->
+    <div class="cat-section" data-cat-group="edu">
       <div class="cat-section__header">
-        <div class="cat-section__title"><span class="cat-section__icon">🎬</span> Motion Graphics</div>
+        <div class="cat-section__title"><span class="cat-section__icon">📚</span> Edu &amp; Exam Prep <span class="cat-section__sub">— MCQ Bundles + LMS Courses</span></div>
         <a href="#" class="cat-section__link">View all →</a>
       </div>
-      <div class="product-grid">
+      <div class="sub-group">
+        <div class="sub-group__label">📝 MCQ Bundles — Competitive Exams</div>
+        <div class="product-grid">
+          <div class="card card--edu"><div class="card__preview" style="background:linear-gradient(135deg,#001828,#002030);"><div class="card__preview-icon">🏛️</div><div class="card__badge-row"><span class="badge badge--mcq">MCQ</span><span class="badge badge--hot">Hot</span></div></div><div class="card__body"><div class="card__name">UPSC Prelims — 5000 MCQ Bundle</div><div class="card__desc">5000 curated MCQs: GS Paper 1 &amp; 2 (CSAT). Subject-wise, year-wise PYQs + AI-generated questions.</div><ul class="card__features"><li><span class="cf check">✓</span> 5000 questions with solutions</li><li><span class="cf check">✓</span> Subject + year-wise</li><li><span class="cf check">✓</span> PDF + online access</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free 50 Qs</a><a href="#" class="btn btn--gold btn--sm">Get Bundle</a></div></div>
 
-        <div class="card card--featured">
-          <div class="card__preview" style="background:linear-gradient(135deg,#1a0500,#0a0f1e);">
-            <div class="card__preview-icon">🎞️</div>
-            <div class="card__badge-row"><span class="badge badge--motion">Motion</span><span class="badge badge--hot">Best Seller</span></div>
-            <div class="card__ribbon">POPULAR</div>
-          </div>
-          <div class="card__body">
-            <div class="card__name">YouTube Intro Pack — 20 Templates</div>
-            <div class="card__desc">High-energy YouTube channel intros. Editable in CapCut and DaVinci Resolve. 20 unique styles — tech, gaming, vlog, education, news.</div>
-            <div class="tier">
-              <div class="tier__col tier__col--free">
-                <div class="tier__label">Free</div>
-                <div class="tier__item"><span class="i check">✓</span> 3 intro templates</div>
-                <div class="tier__item"><span class="i check">✓</span> CapCut editable</div>
-                <div class="tier__item"><span class="i cross">✗</span> <span class="locked">Watermark-free</span></div>
-                <div class="tier__item"><span class="i cross">✗</span> <span class="locked">All 20 templates</span></div>
-              </div>
-              <div class="tier__col tier__col--pro">
-                <div class="tier__label">Pro Pack</div>
-                <div class="tier__item"><span class="i check">✓</span> All 20 templates</div>
-                <div class="tier__item"><span class="i lock">★</span> No watermark</div>
-                <div class="tier__item"><span class="i lock">★</span> CapCut + DaVinci</div>
-                <div class="tier__item"><span class="i lock">★</span> Commercial licence</div>
-              </div>
-            </div>
-            <div class="price-row">
-              <div class="price-row__block"><span class="price-row__label">Free (3 templates)</span><span class="price-row__value price-row__value--free">₹0</span></div>
-              <div class="price-row__divider"></div>
-              <div class="price-row__block"><span class="price-row__label">Full Pack</span><span class="price-row__value price-row__value--pro">₹799</span></div>
-            </div>
-          </div>
-          <div class="card__actions">
-            <a href="#" class="btn btn--outline btn--sm">Free Download</a>
-            <a href="#" class="btn btn--gold btn--sm">Buy Pack ₹799</a>
-          </div>
+          <div class="card card--edu"><div class="card__preview" style="background:linear-gradient(135deg,#001428,#001e30);"><div class="card__preview-icon">📝</div><div class="card__badge-row"><span class="badge badge--mcq">MCQ</span></div></div><div class="card__body"><div class="card__name">UPSC Mains Answer Writing Pack</div><div class="card__desc">200 model answers, 500 practice questions, GS 1-4 + Essay framework templates.</div><ul class="card__features"><li><span class="cf check">✓</span> 200 model answers</li><li><span class="cf check">✓</span> GS 1–4 + Essay</li><li><span class="cf check">✓</span> Answer structure guides</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Sample</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div></div>
+
+          <div class="card card--edu"><div class="card__preview" style="background:linear-gradient(135deg,#001a14,#002018);"><div class="card__preview-icon">🚂</div><div class="card__badge-row"><span class="badge badge--mcq">MCQ</span><span class="badge badge--hot">Hot</span></div></div><div class="card__body"><div class="card__name">RRB NTPC — 3000 MCQ Bundle</div><div class="card__desc">3000 MCQs for RRB NTPC. General awareness, maths, reasoning. Stage 1 + Stage 2 coverage.</div><ul class="card__features"><li><span class="cf check">✓</span> 3000 questions</li><li><span class="cf check">✓</span> Stage 1 + 2</li><li><span class="cf check">✓</span> Hindi + English</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free 50 Qs</a><a href="#" class="btn btn--gold btn--sm">Get Bundle</a></div></div>
+
+          <div class="card card--edu"><div class="card__preview" style="background:linear-gradient(135deg,#0a1800,#102200);"><div class="card__preview-icon">📋</div><div class="card__badge-row"><span class="badge badge--mcq">MCQ</span></div></div><div class="card__body"><div class="card__name">SSC CGL — 4000 MCQ Bundle</div><div class="card__desc">4000 MCQs for SSC CGL: Tier 1 &amp; Tier 2. English, Quant, Reasoning, GK with detailed solutions.</div><ul class="card__features"><li><span class="cf check">✓</span> 4000 questions</li><li><span class="cf check">✓</span> Tier 1 + 2 coverage</li><li><span class="cf check">✓</span> Detailed solutions</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free 50 Qs</a><a href="#" class="btn btn--gold btn--sm">Get Bundle</a></div></div>
+
+          <div class="card card--edu"><div class="card__preview" style="background:linear-gradient(135deg,#001428,#001830);"><div class="card__preview-icon">🏦</div><div class="card__badge-row"><span class="badge badge--mcq">MCQ</span><span class="badge badge--new">New</span></div></div><div class="card__body"><div class="card__name">Banking IBPS PO/Clerk MCQ Pack</div><div class="card__desc">3500 MCQs for IBPS PO, Clerk, SO. Reasoning, English, Quant, GA. Mock test format included.</div><ul class="card__features"><li><span class="cf check">✓</span> 3500 questions</li><li><span class="cf check">✓</span> Mock test format</li><li><span class="cf check">✓</span> Speed tips included</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free 50 Qs</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div></div>
+
+          <div class="card card--edu"><div class="card__preview" style="background:linear-gradient(135deg,#001a10,#002018);"><div class="card__preview-icon">🔬</div><div class="card__badge-row"><span class="badge badge--mcq">MCQ</span></div></div><div class="card__body"><div class="card__name">NEET Biology MCQ Bundle — 2000 Q</div><div class="card__desc">2000 NEET Biology MCQs: Botany + Zoology. Chapter-wise, NCERT-based, PYQ + practice.</div><ul class="card__features"><li><span class="cf check">✓</span> 2000 questions</li><li><span class="cf check">✓</span> NCERT-mapped</li><li><span class="cf check">✓</span> Chapter-wise PDF</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free 50 Qs</a><a href="#" class="btn btn--gold btn--sm">Get Bundle</a></div></div>
+
+          <div class="card card--edu"><div class="card__preview" style="background:linear-gradient(135deg,#100028,#180038);"><div class="card__preview-icon">📐</div><div class="card__badge-row"><span class="badge badge--mcq">MCQ</span></div></div><div class="card__body"><div class="card__name">JEE Maths &amp; Physics MCQ Pack</div><div class="card__desc">2500 JEE MCQs: Maths + Physics. Topic-wise, level 1–3 difficulty, full solutions with steps.</div><ul class="card__features"><li><span class="cf check">✓</span> 2500 questions</li><li><span class="cf check">✓</span> 3 difficulty levels</li><li><span class="cf check">✓</span> Step-by-step solutions</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free 50 Qs</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div></div>
+
+          <div class="card card--edu"><div class="card__preview" style="background:linear-gradient(135deg,#1a0a00,#2a1400);"><div class="card__preview-icon">💼</div><div class="card__badge-row"><span class="badge badge--mcq">MCQ</span><span class="badge badge--new">New</span></div></div><div class="card__body"><div class="card__name">CAT MBA Quantitative Aptitude Pack</div><div class="card__desc">1500 CAT-level quant MCQs. Arithmetic, algebra, geometry, data interpretation. With shortcut tricks.</div><ul class="card__features"><li><span class="cf check">✓</span> 1500 CAT-level questions</li><li><span class="cf check">✓</span> Shortcut tricks guide</li><li><span class="cf check">✓</span> DI sets included</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free 50 Qs</a><a href="#" class="btn btn--gold btn--sm">Get Pack</a></div></div>
         </div>
+      </div>
 
-        <div class="card">
-          <div class="card__preview" style="background:linear-gradient(135deg,#0a0000,#1a0a00);">
-            <div class="card__preview-icon">📱</div>
-            <div class="card__badge-row"><span class="badge badge--motion">Motion</span></div>
-          </div>
-          <div class="card__body">
-            <div class="card__name">Instagram Reels Transition Pack — 50 Clips</div>
-            <div class="card__desc">50 smooth transitions for Reels and YouTube Shorts. Drag-and-drop in CapCut. Perfect for travel, lifestyle, and education content.</div>
-            <div class="tier">
-              <div class="tier__col tier__col--free">
-                <div class="tier__label">Free</div>
-                <div class="tier__item"><span class="i check">✓</span> 10 transitions</div>
-                <div class="tier__item"><span class="i check">✓</span> CapCut ready</div>
-                <div class="tier__item"><span class="i cross">✗</span> <span class="locked">50 transitions</span></div>
-                <div class="tier__item"><span class="i cross">✗</span> <span class="locked">Commercial use</span></div>
-              </div>
-              <div class="tier__col tier__col--pro">
-                <div class="tier__label">Full Pack</div>
-                <div class="tier__item"><span class="i check">✓</span> All 50 transitions</div>
-                <div class="tier__item"><span class="i lock">★</span> Commercial licence</div>
-                <div class="tier__item"><span class="i lock">★</span> CapCut + Premiere</div>
-                <div class="tier__item"><span class="i lock">★</span> Tutorial included</div>
-              </div>
-            </div>
-            <div class="price-row">
-              <div class="price-row__block"><span class="price-row__label">Free (10 clips)</span><span class="price-row__value price-row__value--free">₹0</span></div>
-              <div class="price-row__divider"></div>
-              <div class="price-row__block"><span class="price-row__label">Full Pack</span><span class="price-row__value price-row__value--pro">₹599</span></div>
-            </div>
-          </div>
-          <div class="card__actions">
-            <a href="#" class="btn btn--outline btn--sm">Free Download</a>
-            <a href="#" class="btn btn--gold btn--sm">Buy Pack ₹599</a>
-          </div>
+      <div class="sub-group">
+        <div class="sub-group__label">🎓 LMS Courses — Lifetime Access</div>
+        <div class="product-grid">
+          <div class="card card--edu"><div class="card__preview" style="background:linear-gradient(135deg,#001828,#002030);"><div class="card__preview-icon">🏛️</div><div class="card__badge-row"><span class="badge badge--lms">LMS</span><span class="badge badge--hot">Hot</span></div></div><div class="card__body"><div class="card__name">UPSC Foundation Course — 3 Months</div><div class="card__desc">Complete UPSC Prelims + Mains foundation. 200+ video lessons, notes, MCQ tests, answer writing.</div><ul class="card__features"><li><span class="cf check">✓</span> 200+ video lessons</li><li><span class="cf check">✓</span> Notes + MCQ tests</li><li><span class="cf check">✓</span> Mentor Q&A sessions</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Module</a><a href="#" class="btn btn--gold btn--sm">Enroll</a></div></div>
+
+          <div class="card card--edu"><div class="card__preview" style="background:linear-gradient(135deg,#001428,#001e30);"><div class="card__preview-icon">📣</div><div class="card__badge-row"><span class="badge badge--lms">LMS</span></div></div><div class="card__body"><div class="card__name">Digital Marketing Mastery Course</div><div class="card__desc">SEO, Google Ads, Meta Ads, email marketing, analytics. 60+ video lessons. Certificate included.</div><ul class="card__features"><li><span class="cf check">✓</span> 60+ video lessons</li><li><span class="cf check">✓</span> Hands-on projects</li><li><span class="cf check">✓</span> Certificate of completion</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Module</a><a href="#" class="btn btn--gold btn--sm">Enroll</a></div></div>
+
+          <div class="card card--edu"><div class="card__preview" style="background:linear-gradient(135deg,#0a1800,#102200);"><div class="card__preview-icon">🐍</div><div class="card__badge-row"><span class="badge badge--lms">LMS</span><span class="badge badge--new">New</span></div></div><div class="card__body"><div class="card__name">Python for Beginners Course</div><div class="card__desc">Zero to automation in Python. 80 lessons covering basics to web scraping, APIs, data analysis.</div><ul class="card__features"><li><span class="cf check">✓</span> 80 video lessons</li><li><span class="cf check">✓</span> Live code exercises</li><li><span class="cf check">✓</span> Project portfolio</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Module</a><a href="#" class="btn btn--gold btn--sm">Enroll</a></div></div>
+
+          <div class="card card--edu"><div class="card__preview" style="background:linear-gradient(135deg,#100020,#180030);"><div class="card__preview-icon">🤖</div><div class="card__badge-row"><span class="badge badge--lms">LMS</span></div></div><div class="card__body"><div class="card__name">AI Tools for Professionals Course</div><div class="card__desc">Claude, ChatGPT, Midjourney, Suno, Runway for business. No coding needed. 50 lessons.</div><ul class="card__features"><li><span class="cf check">✓</span> 50 lessons</li><li><span class="cf check">✓</span> Tool-by-tool walkthroughs</li><li><span class="cf check">✓</span> Certificate</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Module</a><a href="#" class="btn btn--gold btn--sm">Enroll</a></div></div>
+
+          <div class="card card--edu"><div class="card__preview" style="background:linear-gradient(135deg,#1a0500,#250800);"><div class="card__preview-icon">📹</div><div class="card__badge-row"><span class="badge badge--lms">LMS</span><span class="badge badge--hot">Hot</span></div></div><div class="card__body"><div class="card__name">YouTube Creator Masterclass</div><div class="card__desc">From zero to monetized. Channel setup, niche, scripting, thumbnail, SEO, shorts, community. 70 lessons.</div><ul class="card__features"><li><span class="cf check">✓</span> 70 lessons</li><li><span class="cf check">✓</span> Monetization roadmap</li><li><span class="cf check">✓</span> Templates + swipe file</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Module</a><a href="#" class="btn btn--gold btn--sm">Enroll</a></div></div>
         </div>
+      </div>
 
-        <div class="card">
-          <div class="card__preview" style="background:linear-gradient(135deg,#001a18,#0a0f1e);">
-            <div class="card__preview-icon">📊</div>
-            <div class="card__badge-row"><span class="badge badge--motion">Motion</span><span class="badge badge--new">New</span></div>
-          </div>
-          <div class="card__body">
-            <div class="card__name">Animated Lower Thirds &amp; Title Pack</div>
-            <div class="card__desc">News-style lower thirds, name plates, and section titles for educational and explainer channels. MP4 + alpha channel variants.</div>
-            <div class="tier">
-              <div class="tier__col tier__col--free">
-                <div class="tier__label">Free</div>
-                <div class="tier__item"><span class="i check">✓</span> 5 lower thirds</div>
-                <div class="tier__item"><span class="i check">✓</span> MP4 export</div>
-                <div class="tier__item"><span class="i cross">✗</span> <span class="locked">Full 30-pack</span></div>
-                <div class="tier__item"><span class="i cross">✗</span> <span class="locked">Alpha channel</span></div>
-              </div>
-              <div class="tier__col tier__col--pro">
-                <div class="tier__label">Full Pack</div>
-                <div class="tier__item"><span class="i check">✓</span> Full 30-pack</div>
-                <div class="tier__item"><span class="i lock">★</span> Alpha (transparent)</div>
-                <div class="tier__item"><span class="i lock">★</span> After Effects source</div>
-                <div class="tier__item"><span class="i lock">★</span> Commercial licence</div>
-              </div>
-            </div>
-            <div class="price-row">
-              <div class="price-row__block"><span class="price-row__label">Free (5 clips)</span><span class="price-row__value price-row__value--free">₹0</span></div>
-              <div class="price-row__divider"></div>
-              <div class="price-row__block"><span class="price-row__label">Full Pack</span><span class="price-row__value price-row__value--pro">₹699</span></div>
-            </div>
-          </div>
-          <div class="card__actions">
-            <a href="#" class="btn btn--outline btn--sm">Free Download</a>
-            <a href="#" class="btn btn--gold btn--sm">Buy Pack ₹699</a>
-          </div>
+      <div class="cat-pricing">
+        <div class="cat-pricing__header"><div class="cat-pricing__title">📚 Edu &amp; Exam — Pricing</div><div class="cat-pricing__note">MCQ bundles = one-time · LMS courses = lifetime access</div></div>
+        <div class="cat-pricing__tiers">
+          <div class="cat-pricing__tier"><div class="cat-pricing__tier-name cat-pricing__tier-name--free">Free Sample</div><div class="cat-pricing__tier-desc">50 MCQs per bundle · Module 1 free on all LMS courses</div><div class="cat-pricing__tier-price cat-pricing__tier-price--free">₹0</div></div>
+          <div class="cat-pricing__tier"><div class="cat-pricing__tier-name cat-pricing__tier-name--pro">MCQ Bundle</div><div class="cat-pricing__tier-desc">Full question set · Solutions · PDF + online access · One-time purchase</div><div class="cat-pricing__tier-price cat-pricing__tier-price--pro">₹299 – ₹999 / bundle</div></div>
+          <div class="cat-pricing__tier"><div class="cat-pricing__tier-name cat-pricing__tier-name--pro">LMS Course</div><div class="cat-pricing__tier-desc">Full course · Lifetime access · Certificate · Mentor Q&amp;A included</div><div class="cat-pricing__tier-price cat-pricing__tier-price--pro">₹1,499 – ₹3,999 / course</div></div>
+          <div class="cat-pricing__tier cat-pricing__tier--bundle"><div class="cat-pricing__tier-name cat-pricing__tier-name--bundle">All Edu Bundle</div><div class="cat-pricing__tier-desc">All MCQ packs + all LMS courses · Priority mentor access · Future content included</div><div class="cat-pricing__tier-price cat-pricing__tier-price--bundle">₹4,999 / year</div></div>
         </div>
-
       </div>
     </div>
 
-    <!-- MCQ Bundles -->
-    <div class="cat-section" data-cat-group="mcq">
-      <div class="cat-section__header">
-        <div class="cat-section__title"><span class="cat-section__icon">📝</span> MCQ Bundles — Competitive Exams</div>
-        <a href="#" class="cat-section__link">View all →</a>
-      </div>
-      <div class="product-grid">
-
-        <div class="card card--featured">
-          <div class="card__preview" style="background:linear-gradient(135deg,#00001a,#001a18);">
-            <div class="card__preview-icon">🏛️</div>
-            <div class="card__badge-row"><span class="badge badge--mcq">MCQ Bundle</span><span class="badge badge--hot">Hot</span></div>
-            <div class="card__ribbon card__ribbon--hot">BESTSELLER</div>
-          </div>
-          <div class="card__body">
-            <div class="card__name">UPSC Prelims — 5000 MCQ Bundle</div>
-            <div class="card__desc">5000 curated MCQs covering GS Paper 1 &amp; 2 (CSAT). Subject-wise, year-wise PYQs + AI-generated practice questions with detailed solutions.</div>
-            <div class="tier">
-              <div class="tier__col tier__col--free">
-                <div class="tier__label">Free</div>
-                <div class="tier__item"><span class="i check">✓</span> 200 free MCQs</div>
-                <div class="tier__item"><span class="i check">✓</span> PDF download</div>
-                <div class="tier__item"><span class="i cross">✗</span> <span class="locked">Full 5000 MCQs</span></div>
-                <div class="tier__item"><span class="i cross">✗</span> <span class="locked">Solutions + notes</span></div>
-              </div>
-              <div class="tier__col tier__col--pro">
-                <div class="tier__label">Full Bundle</div>
-                <div class="tier__item"><span class="i check">✓</span> All 5000 MCQs</div>
-                <div class="tier__item"><span class="i lock">★</span> Detailed solutions</div>
-                <div class="tier__item"><span class="i lock">★</span> Subject-wise splits</div>
-                <div class="tier__item"><span class="i lock">★</span> Monthly new sets</div>
-              </div>
-            </div>
-            <div class="price-row">
-              <div class="price-row__block"><span class="price-row__label">Free (200 MCQs)</span><span class="price-row__value price-row__value--free">₹0</span></div>
-              <div class="price-row__divider"></div>
-              <div class="price-row__block"><span class="price-row__label">Full Bundle</span><span class="price-row__value price-row__value--pro">₹499</span></div>
-            </div>
-          </div>
-          <div class="card__actions">
-            <a href="#" class="btn btn--outline btn--sm">Free 200 MCQs</a>
-            <a href="#" class="btn btn--gold btn--sm">Buy Bundle ₹499</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card__preview" style="background:linear-gradient(135deg,#0a0010,#1a0a1a);">
-            <div class="card__preview-icon">🚂</div>
-            <div class="card__badge-row"><span class="badge badge--mcq">MCQ Bundle</span></div>
-          </div>
-          <div class="card__body">
-            <div class="card__name">RRB NTPC — Complete MCQ Pack</div>
-            <div class="card__desc">3000 MCQs for RRB NTPC — Maths, General Intelligence, General Awareness, English. PYQs from 2015–2024 + mock tests.</div>
-            <div class="tier">
-              <div class="tier__col tier__col--free">
-                <div class="tier__label">Free</div>
-                <div class="tier__item"><span class="i check">✓</span> 150 free MCQs</div>
-                <div class="tier__item"><span class="i check">✓</span> PDF format</div>
-                <div class="tier__item"><span class="i cross">✗</span> <span class="locked">Full 3000 MCQs</span></div>
-                <div class="tier__item"><span class="i cross">✗</span> <span class="locked">Detailed solutions</span></div>
-              </div>
-              <div class="tier__col tier__col--pro">
-                <div class="tier__label">Full Bundle</div>
-                <div class="tier__item"><span class="i check">✓</span> All 3000 MCQs</div>
-                <div class="tier__item"><span class="i lock">★</span> Solutions + tricks</div>
-                <div class="tier__item"><span class="i lock">★</span> Topic-wise sets</div>
-                <div class="tier__item"><span class="i lock">★</span> Mock tests</div>
-              </div>
-            </div>
-            <div class="price-row">
-              <div class="price-row__block"><span class="price-row__label">Free (150 MCQs)</span><span class="price-row__value price-row__value--free">₹0</span></div>
-              <div class="price-row__divider"></div>
-              <div class="price-row__block"><span class="price-row__label">Full Bundle</span><span class="price-row__value price-row__value--pro">₹399</span></div>
-            </div>
-          </div>
-          <div class="card__actions">
-            <a href="#" class="btn btn--outline btn--sm">Free 150 MCQs</a>
-            <a href="#" class="btn btn--gold btn--sm">Buy Bundle ₹399</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card__preview" style="background:linear-gradient(135deg,#001a10,#0a0f1e);">
-            <div class="card__preview-icon">🏦</div>
-            <div class="card__badge-row"><span class="badge badge--mcq">MCQ Bundle</span><span class="badge badge--new">New</span></div>
-          </div>
-          <div class="card__body">
-            <div class="card__name">IBPS PO / Clerk — Banking MCQ Pack</div>
-            <div class="card__desc">2500 MCQs for IBPS PO and Clerk. Quantitative Aptitude, Reasoning, English, and Banking Awareness — all sections covered.</div>
-            <div class="tier">
-              <div class="tier__col tier__col--free">
-                <div class="tier__label">Free</div>
-                <div class="tier__item"><span class="i check">✓</span> 100 free MCQs</div>
-                <div class="tier__item"><span class="i check">✓</span> PDF download</div>
-                <div class="tier__item"><span class="i cross">✗</span> <span class="locked">Full 2500 MCQs</span></div>
-                <div class="tier__item"><span class="i cross">✗</span> <span class="locked">Mock tests</span></div>
-              </div>
-              <div class="tier__col tier__col--pro">
-                <div class="tier__label">Full Bundle</div>
-                <div class="tier__item"><span class="i check">✓</span> All 2500 MCQs</div>
-                <div class="tier__item"><span class="i lock">★</span> Solutions + explanations</div>
-                <div class="tier__item"><span class="i lock">★</span> 5 full mock tests</div>
-                <div class="tier__item"><span class="i lock">★</span> Current affairs add-on</div>
-              </div>
-            </div>
-            <div class="price-row">
-              <div class="price-row__block"><span class="price-row__label">Free (100 MCQs)</span><span class="price-row__value price-row__value--free">₹0</span></div>
-              <div class="price-row__divider"></div>
-              <div class="price-row__block"><span class="price-row__label">Full Bundle</span><span class="price-row__value price-row__value--pro">₹449</span></div>
-            </div>
-          </div>
-          <div class="card__actions">
-            <a href="#" class="btn btn--outline btn--sm">Free 100 MCQs</a>
-            <a href="#" class="btn btn--gold btn--sm">Buy Bundle ₹449</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- LMS Courses -->
-    <div class="cat-section" data-cat-group="lms">
-      <div class="cat-section__header">
-        <div class="cat-section__title"><span class="cat-section__icon">🎓</span> LMS Access — Online Courses</div>
-        <a href="#" class="cat-section__link">View all →</a>
-      </div>
-      <div class="product-grid">
-
-        <div class="card card--featured">
-          <div class="card__preview" style="background:linear-gradient(135deg,#001018,#001a18);">
-            <div class="card__preview-icon">🤖</div>
-            <div class="card__badge-row"><span class="badge badge--lms">LMS Course</span><span class="badge badge--ai">AI</span></div>
-            <div class="card__ribbon card__ribbon--ai">FEATURED</div>
-          </div>
-          <div class="card__body">
-            <div class="card__name">AI for Indian Creators — Full Course</div>
-            <div class="card__desc">12-module course on using AI tools for YouTube, content creation, business automation, and earning online. Hindi + English. Lifetime LMS access.</div>
-            <div class="tier">
-              <div class="tier__col tier__col--free">
-                <div class="tier__label">Free Preview</div>
-                <div class="tier__item"><span class="i check">✓</span> Module 1 free</div>
-                <div class="tier__item"><span class="i check">✓</span> Community access</div>
-                <div class="tier__item"><span class="i cross">✗</span> <span class="locked">All 12 modules</span></div>
-                <div class="tier__item"><span class="i cross">✗</span> <span class="locked">Certificate</span></div>
-              </div>
-              <div class="tier__col tier__col--pro">
-                <div class="tier__label">Full Access</div>
-                <div class="tier__item"><span class="i check">✓</span> All 12 modules</div>
-                <div class="tier__item"><span class="i lock">★</span> Lifetime LMS access</div>
-                <div class="tier__item"><span class="i lock">★</span> Certificate of completion</div>
-                <div class="tier__item"><span class="i lock">★</span> Q&amp;A + mentorship</div>
-              </div>
-            </div>
-            <div class="price-row">
-              <div class="price-row__block"><span class="price-row__label">Free Preview</span><span class="price-row__value price-row__value--free">₹0</span></div>
-              <div class="price-row__divider"></div>
-              <div class="price-row__block"><span class="price-row__label">Full Access</span><span class="price-row__value price-row__value--pro">₹2,999</span></div>
-            </div>
-          </div>
-          <div class="card__actions">
-            <a href="#" class="btn btn--outline btn--sm">Free Preview</a>
-            <a href="#" class="btn btn--gold btn--sm">Enroll ₹2,999</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card__preview" style="background:linear-gradient(135deg,#001a2e,#0a0f1e);">
-            <div class="card__preview-icon">💹</div>
-            <div class="card__badge-row"><span class="badge badge--lms">LMS Course</span></div>
-          </div>
-          <div class="card__body">
-            <div class="card__name">Stock Market for Beginners</div>
-            <div class="card__desc">8-module course on Indian stock market, mutual funds, SIPs, and portfolio building. Taught in Hindi with English subtitles.</div>
-            <div class="tier">
-              <div class="tier__col tier__col--free">
-                <div class="tier__label">Free Preview</div>
-                <div class="tier__item"><span class="i check">✓</span> Module 1 free</div>
-                <div class="tier__item"><span class="i check">✓</span> Community access</div>
-                <div class="tier__item"><span class="i cross">✗</span> <span class="locked">Full 8 modules</span></div>
-                <div class="tier__item"><span class="i cross">✗</span> <span class="locked">Certificate</span></div>
-              </div>
-              <div class="tier__col tier__col--pro">
-                <div class="tier__label">Full Access</div>
-                <div class="tier__item"><span class="i check">✓</span> All 8 modules</div>
-                <div class="tier__item"><span class="i lock">★</span> Lifetime access</div>
-                <div class="tier__item"><span class="i lock">★</span> Certificate</div>
-                <div class="tier__item"><span class="i lock">★</span> Live Q&amp;A sessions</div>
-              </div>
-            </div>
-            <div class="price-row">
-              <div class="price-row__block"><span class="price-row__label">Free Preview</span><span class="price-row__value price-row__value--free">₹0</span></div>
-              <div class="price-row__divider"></div>
-              <div class="price-row__block"><span class="price-row__label">Full Access</span><span class="price-row__value price-row__value--pro">₹1,999</span></div>
-            </div>
-          </div>
-          <div class="card__actions">
-            <a href="#" class="btn btn--outline btn--sm">Free Preview</a>
-            <a href="#" class="btn btn--gold btn--sm">Enroll ₹1,999</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card__preview" style="background:linear-gradient(135deg,#0a0010,#1a0a1e);">
-            <div class="card__preview-icon">🧠</div>
-            <div class="card__badge-row"><span class="badge badge--lms">LMS Course</span><span class="badge badge--ai">AI</span><span class="badge badge--new">New</span></div>
-          </div>
-          <div class="card__body">
-            <div class="card__name">Build Your Own AI Agent — Hands-On</div>
-            <div class="card__desc">10-module hands-on course on building custom AI agents using Claude API, Claude Code, and n8n workflows. No prior AI experience needed.</div>
-            <div class="tier">
-              <div class="tier__col tier__col--free">
-                <div class="tier__label">Free Preview</div>
-                <div class="tier__item"><span class="i check">✓</span> 2 modules free</div>
-                <div class="tier__item"><span class="i check">✓</span> Community access</div>
-                <div class="tier__item"><span class="i cross">✗</span> <span class="locked">Full 10 modules</span></div>
-                <div class="tier__item"><span class="i cross">✗</span> <span class="locked">Source code</span></div>
-              </div>
-              <div class="tier__col tier__col--pro">
-                <div class="tier__label">Full Access</div>
-                <div class="tier__item"><span class="i check">✓</span> All 10 modules</div>
-                <div class="tier__item"><span class="i lock">★</span> Source code included</div>
-                <div class="tier__item"><span class="i lock">★</span> Mentor support</div>
-                <div class="tier__item"><span class="i lock">★</span> Certificate</div>
-              </div>
-            </div>
-            <div class="price-row">
-              <div class="price-row__block"><span class="price-row__label">Free Preview</span><span class="price-row__value price-row__value--free">₹0</span></div>
-              <div class="price-row__divider"></div>
-              <div class="price-row__block"><span class="price-row__label">Full Access</span><span class="price-row__value price-row__value--pro">₹3,499</span></div>
-            </div>
-          </div>
-          <div class="card__actions">
-            <a href="#" class="btn btn--outline btn--sm">Free Preview</a>
-            <a href="#" class="btn btn--gold btn--sm">Enroll ₹3,499</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- WordPress Themes & Plugins -->
+    <!-- ═══ WORDPRESS & DEV ═══ -->
     <div class="cat-section" data-cat-group="wp">
       <div class="cat-section__header">
-        <div class="cat-section__title"><span class="cat-section__icon">🧩</span> WordPress Themes &amp; Plugins</div>
+        <div class="cat-section__title"><span class="cat-section__icon">🧩</span> WordPress &amp; Dev <span class="cat-section__sub">— Themes · Plugins · Custom PHP Sites</span></div>
         <a href="#" class="cat-section__link">View all →</a>
       </div>
       <div class="product-grid">
+        <div class="card"><div class="card__preview" style="background:linear-gradient(135deg,#001428,#001e30);"><div class="card__preview-icon">📝</div><div class="card__badge-row"><span class="badge badge--wp">Theme</span><span class="badge badge--hot">Popular</span></div></div><div class="card__body"><div class="card__name">DGT Blog Theme</div><div class="card__desc">Fast, SEO-ready WordPress blog theme. Score 95+ on PageSpeed. Gutenberg blocks, AdSense-optimized.</div><ul class="card__features"><li><span class="cf check">✓</span> PageSpeed 95+</li><li><span class="cf check">✓</span> AdSense optimised</li><li><span class="cf check">✓</span> Gutenberg + Elementor</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Demo</a><a href="#" class="btn btn--gold btn--sm">Get Theme</a></div></div>
 
-        <div class="card card--featured">
-          <div class="card__preview" style="background:linear-gradient(135deg,#0d1b2e,#1a3a4a);">
-            <div class="card__preview-icon">🏢</div>
-            <div class="card__badge-row"><span class="badge badge--wp">WP Theme</span><span class="badge badge--new">Popular</span></div>
-            <div class="card__ribbon">POPULAR</div>
-          </div>
-          <div class="card__body">
-            <div class="card__name">BizPro — Business WordPress Theme</div>
-            <div class="card__desc">Full-featured WordPress business theme for Indian SMEs. Homepage, services, team, testimonials, and contact included. WooCommerce ready in Pro.</div>
-            <div class="tier">
-              <div class="tier__col tier__col--free">
-                <div class="tier__label">Free</div>
-                <div class="tier__item"><span class="i check">✓</span> 5-page template</div>
-                <div class="tier__item"><span class="i check">✓</span> Mobile responsive</div>
-                <div class="tier__item"><span class="i cross">✗</span> <span class="locked">Advanced layouts</span></div>
-                <div class="tier__item"><span class="i cross">✗</span> <span class="locked">WooCommerce</span></div>
-              </div>
-              <div class="tier__col tier__col--pro">
-                <div class="tier__label">Pro</div>
-                <div class="tier__item"><span class="i check">✓</span> 20+ page templates</div>
-                <div class="tier__item"><span class="i lock">★</span> WooCommerce ready</div>
-                <div class="tier__item"><span class="i lock">★</span> Advanced customizer</div>
-                <div class="tier__item"><span class="i lock">★</span> Priority support</div>
-              </div>
-            </div>
-            <div class="price-row">
-              <div class="price-row__block"><span class="price-row__label">Free</span><span class="price-row__value price-row__value--free">₹0</span></div>
-              <div class="price-row__divider"></div>
-              <div class="price-row__block"><span class="price-row__label">Pro (one-time)</span><span class="price-row__value price-row__value--pro">₹1,999</span></div>
-            </div>
-          </div>
-          <div class="card__actions">
-            <a href="#" class="btn btn--outline btn--sm">Free Download</a>
-            <a href="#" class="btn btn--gold btn--sm">Buy Pro ₹1,999</a>
-          </div>
+        <div class="card"><div class="card__preview" style="background:linear-gradient(135deg,#0a1800,#102200);"><div class="card__preview-icon">💼</div><div class="card__badge-row"><span class="badge badge--wp">Theme</span></div></div><div class="card__body"><div class="card__name">DGT Business Pro Theme</div><div class="card__desc">Corporate WordPress theme for agencies, consultants, startups. Mega menu, portfolio, team sections.</div><ul class="card__features"><li><span class="cf check">✓</span> Mega menu</li><li><span class="cf check">✓</span> Portfolio + team</li><li><span class="cf check">✓</span> 1-click demo import</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Demo</a><a href="#" class="btn btn--gold btn--sm">Get Theme</a></div></div>
+
+        <div class="card"><div class="card__preview" style="background:linear-gradient(135deg,#001828,#002030);"><div class="card__preview-icon">🎓</div><div class="card__badge-row"><span class="badge badge--wp">Theme</span><span class="badge badge--new">New</span></div></div><div class="card__body"><div class="card__name">DGT LMS Theme</div><div class="card__desc">LearnDash + TutorLMS compatible. Course grids, instructor profiles, progress bars, quiz styles.</div><ul class="card__features"><li><span class="cf check">✓</span> LearnDash compatible</li><li><span class="cf check">✓</span> Progress + quiz UI</li><li><span class="cf check">✓</span> Mobile-first</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Demo</a><a href="#" class="btn btn--gold btn--sm">Get Theme</a></div></div>
+
+        <div class="card"><div class="card__preview" style="background:linear-gradient(135deg,#100020,#180030);"><div class="card__preview-icon">🛒</div><div class="card__badge-row"><span class="badge badge--wp">Theme</span></div></div><div class="card__body"><div class="card__name">DGT WooCommerce Theme</div><div class="card__desc">Fast WooCommerce theme with AJAX cart, wishlist, product filters, Razorpay + PayU gateway ready.</div><ul class="card__features"><li><span class="cf check">✓</span> AJAX cart + wishlist</li><li><span class="cf check">✓</span> Razorpay ready</li><li><span class="cf check">✓</span> Product filter</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Demo</a><a href="#" class="btn btn--gold btn--sm">Get Theme</a></div></div>
+
+        <div class="card"><div class="card__preview" style="background:linear-gradient(135deg,#1a0500,#250800);"><div class="card__preview-icon">📰</div><div class="card__badge-row"><span class="badge badge--wp">Theme</span></div></div><div class="card__body"><div class="card__name">DGT News Magazine Theme</div><div class="card__desc">High-performance news theme. Breaking news ticker, AMP support, Google News optimized. Fast loads.</div><ul class="card__features"><li><span class="cf check">✓</span> AMP support</li><li><span class="cf check">✓</span> Breaking news ticker</li><li><span class="cf check">✓</span> Google News ready</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Demo</a><a href="#" class="btn btn--gold btn--sm">Get Theme</a></div></div>
+
+        <div class="card"><div class="card__preview" style="background:linear-gradient(135deg,#0a1020,#101828);"><div class="card__preview-icon">📈</div><div class="card__badge-row"><span class="badge badge--wp">Plugin</span><span class="badge badge--hot">Hot</span></div></div><div class="card__body"><div class="card__name">SEO Booster Plugin</div><div class="card__desc">Schema markup, XML sitemap, meta auto-generator, breadcrumbs, internal link suggestions. Yoast alternative.</div><ul class="card__features"><li><span class="cf check">✓</span> Schema + sitemap</li><li><span class="cf check">✓</span> Meta auto-generator</li><li><span class="cf check">✓</span> Internal link AI</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Lite</a><a href="#" class="btn btn--gold btn--sm">Get Pro</a></div></div>
+
+        <div class="card"><div class="card__preview" style="background:linear-gradient(135deg,#001428,#002030);"><div class="card__preview-icon">🎯</div><div class="card__badge-row"><span class="badge badge--wp">Plugin</span></div></div><div class="card__body"><div class="card__name">Lead Capture Plugin</div><div class="card__desc">Exit-intent popups, inline forms, sticky bars, A/B testing. Connect to Mailchimp, Brevo, WhatsApp.</div><ul class="card__features"><li><span class="cf check">✓</span> Exit-intent + sticky bar</li><li><span class="cf check">✓</span> A/B testing built-in</li><li><span class="cf check">✓</span> WhatsApp integration</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Lite</a><a href="#" class="btn btn--gold btn--sm">Get Pro</a></div></div>
+
+        <div class="card card--ai"><div class="card__preview" style="background:linear-gradient(135deg,#0a0018,#150028);"><div class="card__preview-icon">🤖</div><div class="card__badge-row"><span class="badge badge--wp">Plugin</span><span class="badge badge--ai">AI</span></div></div><div class="card__body"><div class="card__name">AI Content Block Plugin</div><div class="card__desc">Gutenberg block that generates content via Claude API directly inside WordPress editor. One-click rewrite.</div><ul class="card__features"><li><span class="cf check">✓</span> Gutenberg native block</li><li><span class="cf check">✓</span> Claude API powered</li><li><span class="cf check">✓</span> One-click rewrite</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Demo</a><a href="#" class="btn btn--gold btn--sm">Get Plugin</a></div></div>
+
+        <div class="card"><div class="card__preview" style="background:linear-gradient(135deg,#001818,#002020);"><div class="card__preview-icon">🔒</div><div class="card__badge-row"><span class="badge badge--wp">Plugin</span><span class="badge badge--new">New</span></div></div><div class="card__body"><div class="card__name">WP Security Shield Plugin</div><div class="card__desc">Login protection, firewall, malware scanner, 2FA, IP blocking. Lightweight — no server slowdown.</div><ul class="card__features"><li><span class="cf check">✓</span> 2FA + login protection</li><li><span class="cf check">✓</span> Malware scanner</li><li><span class="cf check">✓</span> IP blocking + firewall</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Lite</a><a href="#" class="btn btn--gold btn--sm">Get Pro</a></div></div>
+
+        <div class="card card--featured"><div class="card__preview" style="background:linear-gradient(135deg,#001a28,#002030);"><div class="card__preview-icon">🏗️</div><div class="card__badge-row"><span class="badge badge--wp">Custom PHP</span><span class="badge badge--hot">Premium</span></div><div class="card__ribbon">CUSTOM</div></div><div class="card__body"><div class="card__name">Custom PHP Business Site</div><div class="card__desc">Fully custom PHP site — no WordPress, no plugins. Like Trinetra Travels or Vishnu IAS. Built from scratch.</div><ul class="card__features"><li><span class="cf check">✓</span> 100% custom PHP</li><li><span class="cf check">✓</span> Admin panel included</li><li><span class="cf check">✓</span> Razorpay + WhatsApp</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">View Demo</a><a href="#" class="btn btn--gold btn--sm">Get Quote</a></div></div>
+
+        <div class="card card--featured"><div class="card__preview" style="background:linear-gradient(135deg,#1a1000,#2a1800);"><div class="card__preview-icon">📅</div><div class="card__badge-row"><span class="badge badge--wp">Custom PHP</span></div></div><div class="card__body"><div class="card__name">Custom PHP Booking Site</div><div class="card__desc">Appointment/booking site in PHP. Calendar, time slots, SMS reminders, Razorpay payments. Any business type.</div><ul class="card__features"><li><span class="cf check">✓</span> Calendar + time slots</li><li><span class="cf check">✓</span> SMS + WhatsApp reminders</li><li><span class="cf check">✓</span> Razorpay payments</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">View Demo</a><a href="#" class="btn btn--gold btn--sm">Get Quote</a></div></div>
+      </div>
+      <div class="cat-pricing">
+        <div class="cat-pricing__header"><div class="cat-pricing__title">🧩 WordPress &amp; Dev — Pricing</div><div class="cat-pricing__note">Themes + Plugins = one-time · Custom PHP = project-based quote</div></div>
+        <div class="cat-pricing__tiers">
+          <div class="cat-pricing__tier"><div class="cat-pricing__tier-name cat-pricing__tier-name--free">Free Lite</div><div class="cat-pricing__tier-desc">Lite version of plugins · Theme demo access · Personal use only</div><div class="cat-pricing__tier-price cat-pricing__tier-price--free">₹0</div></div>
+          <div class="cat-pricing__tier"><div class="cat-pricing__tier-name cat-pricing__tier-name--pro">WP Theme / Plugin</div><div class="cat-pricing__tier-desc">Full version · 1 site license · 1 year updates + support · Commercial use</div><div class="cat-pricing__tier-price cat-pricing__tier-price--pro">₹999 – ₹2,499</div></div>
+          <div class="cat-pricing__tier"><div class="cat-pricing__tier-name cat-pricing__tier-name--pro">Custom PHP Site</div><div class="cat-pricing__tier-desc">Fully custom built · Admin panel · Payment integration · 3 months support</div><div class="cat-pricing__tier-price cat-pricing__tier-price--pro">₹9,999 – ₹24,999</div></div>
+          <div class="cat-pricing__tier cat-pricing__tier--bundle"><div class="cat-pricing__tier-name cat-pricing__tier-name--bundle">WP Dev Bundle</div><div class="cat-pricing__tier-desc">All themes + all plugins · Unlimited site license · Priority support · Lifetime updates</div><div class="cat-pricing__tier-price cat-pricing__tier-price--bundle">₹5,999 one-time</div></div>
         </div>
-
-        <div class="card">
-          <div class="card__preview" style="background:linear-gradient(135deg,#0a0010,#1a0a1a);">
-            <div class="card__preview-icon">🔌</div>
-            <div class="card__badge-row"><span class="badge badge--wp">WP Plugin</span></div>
-          </div>
-          <div class="card__body">
-            <div class="card__name">LeadForm Pro — Indian Lead Capture Plugin</div>
-            <div class="card__desc">Smart contact forms with Indian mobile validation, WhatsApp alerts, Razorpay integration, and CRM export. Works on any WordPress theme.</div>
-            <div class="tier">
-              <div class="tier__col tier__col--free">
-                <div class="tier__label">Free</div>
-                <div class="tier__item"><span class="i check">✓</span> Unlimited forms</div>
-                <div class="tier__item"><span class="i check">✓</span> Email notifications</div>
-                <div class="tier__item"><span class="i cross">✗</span> <span class="locked">WhatsApp alerts</span></div>
-                <div class="tier__item"><span class="i cross">✗</span> <span class="locked">CRM export</span></div>
-              </div>
-              <div class="tier__col tier__col--pro">
-                <div class="tier__label">Pro</div>
-                <div class="tier__item"><span class="i check">✓</span> Everything in Free</div>
-                <div class="tier__item"><span class="i lock">★</span> WhatsApp alerts</div>
-                <div class="tier__item"><span class="i lock">★</span> CRM + CSV export</div>
-                <div class="tier__item"><span class="i lock">★</span> Analytics dashboard</div>
-              </div>
-            </div>
-            <div class="price-row">
-              <div class="price-row__block"><span class="price-row__label">Free</span><span class="price-row__value price-row__value--free">₹0</span></div>
-              <div class="price-row__divider"></div>
-              <div class="price-row__block"><span class="price-row__label">Pro (one-time)</span><span class="price-row__value price-row__value--pro">₹999</span></div>
-            </div>
-          </div>
-          <div class="card__actions">
-            <a href="#" class="btn btn--outline btn--sm">Free Download</a>
-            <a href="#" class="btn btn--gold btn--sm">Buy Pro ₹999</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card__preview" style="background:linear-gradient(135deg,#001a10,#0a0f1e);">
-            <div class="card__preview-icon">🎓</div>
-            <div class="card__badge-row"><span class="badge badge--wp">WP Theme</span><span class="badge badge--new">New</span></div>
-          </div>
-          <div class="card__body">
-            <div class="card__name">EduReach — School &amp; College Theme</div>
-            <div class="card__desc">Modern educational institution WordPress theme. Admissions, courses, faculty, events, and notice board sections built in.</div>
-            <div class="tier">
-              <div class="tier__col tier__col--free">
-                <div class="tier__label">Free</div>
-                <div class="tier__item"><span class="i check">✓</span> 4-page layout</div>
-                <div class="tier__item"><span class="i check">✓</span> Courses listing</div>
-                <div class="tier__item"><span class="i cross">✗</span> <span class="locked">Online admissions</span></div>
-                <div class="tier__item"><span class="i cross">✗</span> <span class="locked">Events calendar</span></div>
-              </div>
-              <div class="tier__col tier__col--pro">
-                <div class="tier__label">Pro</div>
-                <div class="tier__item"><span class="i check">✓</span> Everything in Free</div>
-                <div class="tier__item"><span class="i lock">★</span> Online admission form</div>
-                <div class="tier__item"><span class="i lock">★</span> Faculty directory</div>
-                <div class="tier__item"><span class="i lock">★</span> Events calendar</div>
-              </div>
-            </div>
-            <div class="price-row">
-              <div class="price-row__block"><span class="price-row__label">Free</span><span class="price-row__value price-row__value--free">₹0</span></div>
-              <div class="price-row__divider"></div>
-              <div class="price-row__block"><span class="price-row__label">Pro (one-time)</span><span class="price-row__value price-row__value--pro">₹1,999</span></div>
-            </div>
-          </div>
-          <div class="card__actions">
-            <a href="#" class="btn btn--outline btn--sm">Free Download</a>
-            <a href="#" class="btn btn--gold btn--sm">Buy Pro ₹1,999</a>
-          </div>
-        </div>
-
       </div>
     </div>
 
-  </div>
-</section>
+    <!-- ═══ AI TRAINING ═══ -->
+    <div class="cat-section" data-cat-group="training">
+      <div class="cat-section__header">
+        <div class="cat-section__title"><span class="cat-section__icon">🧠</span> AI Training <span class="cat-section__sub">— Hands-on courses to master AI tools</span></div>
+        <a href="#" class="cat-section__link">View all →</a>
+      </div>
+      <div class="product-grid">
+        <div class="card card--ai"><div class="card__preview" style="background:linear-gradient(135deg,#0a0018,#150028);"><div class="card__preview-icon">💬</div><div class="card__badge-row"><span class="badge badge--ai">Course</span><span class="badge badge--hot">Popular</span></div></div><div class="card__body"><div class="card__name">Prompt Engineering Masterclass</div><div class="card__desc">Write prompts that actually work. Claude, ChatGPT, Gemini. 40 lessons, real projects, prompt library.</div><ul class="card__features"><li><span class="cf check">✓</span> 40 lessons</li><li><span class="cf check">✓</span> Prompt library (500+)</li><li><span class="cf check">✓</span> Certificate</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Module</a><a href="#" class="btn btn--gold btn--sm">Enroll</a></div></div>
 
-<!-- Pricing Plans -->
-<section class="section section--alt" id="pricing">
-  <div class="container">
-    <div class="section__header section__header--center">
-      <h2>Pricing &amp; Plans</h2>
-      <p>Individual products or grab a bundle. No subscription traps — you own what you buy.</p>
+        <div class="card card--ai"><div class="card__preview" style="background:linear-gradient(135deg,#001428,#002030);"><div class="card__preview-icon">⚙️</div><div class="card__badge-row"><span class="badge badge--ai">Course</span><span class="badge badge--new">New</span></div></div><div class="card__body"><div class="card__name">Claude API Integration Workshop</div><div class="card__desc">Build real apps with Claude API. Tool use, caching, streaming, Claude Code. 30 hands-on lessons.</div><ul class="card__features"><li><span class="cf check">✓</span> 30 hands-on lessons</li><li><span class="cf check">✓</span> GitHub project repos</li><li><span class="cf check">✓</span> Certificate</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Module</a><a href="#" class="btn btn--gold btn--sm">Enroll</a></div></div>
+
+        <div class="card card--ai"><div class="card__preview" style="background:linear-gradient(135deg,#0a1000,#102000);"><div class="card__preview-icon">🤖</div><div class="card__badge-row"><span class="badge badge--ai">Course</span><span class="badge badge--hot">Hot</span></div></div><div class="card__body"><div class="card__name">Build Your First AI Agent</div><div class="card__desc">Hands-on: build a real working AI agent from zero. Claude SDK, tools, memory, multi-step tasks.</div><ul class="card__features"><li><span class="cf check">✓</span> Build 3 real agents</li><li><span class="cf check">✓</span> Claude SDK step-by-step</li><li><span class="cf check">✓</span> Deploy to production</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Module</a><a href="#" class="btn btn--gold btn--sm">Enroll</a></div></div>
+
+        <div class="card card--ai"><div class="card__preview" style="background:linear-gradient(135deg,#100020,#1a0030);"><div class="card__preview-icon">🎨</div><div class="card__badge-row"><span class="badge badge--ai">Course</span></div></div><div class="card__body"><div class="card__name">AI for Content Creators (No-Code)</div><div class="card__desc">Use AI to write, design, edit video, make music — without coding. For YouTubers, bloggers, brand owners.</div><ul class="card__features"><li><span class="cf check">✓</span> No coding needed</li><li><span class="cf check">✓</span> 8 AI tools covered</li><li><span class="cf check">✓</span> Content workflow system</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Module</a><a href="#" class="btn btn--gold btn--sm">Enroll</a></div></div>
+
+        <div class="card card--ai"><div class="card__preview" style="background:linear-gradient(135deg,#001a10,#002018);"><div class="card__preview-icon">🔧</div><div class="card__badge-row"><span class="badge badge--ai">Course</span></div></div><div class="card__body"><div class="card__name">ChatGPT + Claude Workflow Builder</div><div class="card__desc">Build automation workflows combining ChatGPT and Claude. Make, Zapier, n8n integrations.</div><ul class="card__features"><li><span class="cf check">✓</span> Make + Zapier + n8n</li><li><span class="cf check">✓</span> 20 workflow templates</li><li><span class="cf check">✓</span> Certificate</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Module</a><a href="#" class="btn btn--gold btn--sm">Enroll</a></div></div>
+
+        <div class="card card--ai"><div class="card__preview" style="background:linear-gradient(135deg,#1a0010,#280018);"><div class="card__preview-icon">🖼️</div><div class="card__badge-row"><span class="badge badge--ai">Course</span><span class="badge badge--new">New</span></div></div><div class="card__body"><div class="card__name">Midjourney for Designers</div><div class="card__desc">Master Midjourney V7. Style prompting, consistent characters, brand identity, print-ready outputs.</div><ul class="card__features"><li><span class="cf check">✓</span> Midjourney V7 focused</li><li><span class="cf check">✓</span> Brand identity workflows</li><li><span class="cf check">✓</span> Prompt recipe library</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Module</a><a href="#" class="btn btn--gold btn--sm">Enroll</a></div></div>
+
+        <div class="card card--ai"><div class="card__preview" style="background:linear-gradient(135deg,#001428,#002030);"><div class="card__preview-icon">🎬</div><div class="card__badge-row"><span class="badge badge--ai">Course</span></div></div><div class="card__body"><div class="card__name">AI Video Editing with CapCut AI</div><div class="card__desc">CapCut AI features, auto-captions, AI effects, script-to-video, Reels optimization. 25 lessons.</div><ul class="card__features"><li><span class="cf check">✓</span> 25 lessons</li><li><span class="cf check">✓</span> Reels + Shorts focus</li><li><span class="cf check">✓</span> Template library</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Module</a><a href="#" class="btn btn--gold btn--sm">Enroll</a></div></div>
+
+        <div class="card card--ai"><div class="card__preview" style="background:linear-gradient(135deg,#0a1800,#102200);"><div class="card__preview-icon">🏢</div><div class="card__badge-row"><span class="badge badge--ai">Course</span><span class="badge badge--hot">Hot</span></div></div><div class="card__body"><div class="card__name">AI for Business Owners (No Code)</div><div class="card__desc">Automate invoicing, customer support, marketing, reporting with AI. No coding. For SMBs and MSMEs.</div><ul class="card__features"><li><span class="cf check">✓</span> MSME/SMB focused</li><li><span class="cf check">✓</span> 6 automation templates</li><li><span class="cf check">✓</span> WhatsApp + Razorpay workflows</li></ul></div><div class="card__actions"><a href="#" class="btn btn--outline btn--sm">Free Module</a><a href="#" class="btn btn--gold btn--sm">Enroll</a></div></div>
+      </div>
+      <div class="cat-pricing">
+        <div class="cat-pricing__header"><div class="cat-pricing__title">🧠 AI Training — Pricing</div><div class="cat-pricing__note">Lifetime access · Certificate included · Hindi + English content</div></div>
+        <div class="cat-pricing__tiers">
+          <div class="cat-pricing__tier"><div class="cat-pricing__tier-name cat-pricing__tier-name--free">Free Module</div><div class="cat-pricing__tier-desc">First module of every course · No certificate · No projects</div><div class="cat-pricing__tier-price cat-pricing__tier-price--free">₹0</div></div>
+          <div class="cat-pricing__tier"><div class="cat-pricing__tier-name cat-pricing__tier-name--pro">Individual Course</div><div class="cat-pricing__tier-desc">Full course · Lifetime access · Certificate · Community access</div><div class="cat-pricing__tier-price cat-pricing__tier-price--pro">₹1,999 – ₹3,999 / course</div></div>
+          <div class="cat-pricing__tier cat-pricing__tier--bundle"><div class="cat-pricing__tier-name cat-pricing__tier-name--bundle">All AI Training Bundle</div><div class="cat-pricing__tier-desc">All 8 courses + future courses · Priority support · 1-on-1 session/month</div><div class="cat-pricing__tier-price cat-pricing__tier-price--bundle">₹7,999 / year</div></div>
+        </div>
+      </div>
     </div>
-    <div class="plans-grid">
 
-      <div class="plan plan--free">
-        <div class="plan__name">Free Tier</div>
-        <div class="plan__price"><sub>₹</sub>0</div>
-        <div class="plan__period">No credit card · No expiry</div>
-        <ul class="plan__features">
-          <li><span class="fi check">✓</span> Starter on all products</li>
-          <li><span class="fi check">✓</span> 100–200 free MCQs per bundle</li>
-          <li><span class="fi check">✓</span> Module 1 free on all LMS courses</li>
-          <li><span class="fi check">✓</span> Free motion graphic clips</li>
-          <li><span class="fi check">✓</span> 3 AI agent runs/day</li>
-          <li><span class="fi cross">✗</span> Advanced / Pro features</li>
-          <li><span class="fi cross">✗</span> Commercial licence</li>
-        </ul>
-        <a href="#products" class="btn btn--outline btn--full">Start Free</a>
-      </div>
-
-      <div class="plan plan--pro plan--popular">
-        <div class="plan__badge">MOST POPULAR</div>
-        <div class="plan__name">Pro — Per Product</div>
-        <div class="plan__price"><sub>₹</sub>499<span style="font-size:1rem;font-weight:600;color:var(--text-muted);">+</span></div>
-        <div class="plan__period">One-time · Lifetime licence · Per product</div>
-        <ul class="plan__features">
-          <li><span class="fi check">✓</span> Everything in Free</li>
-          <li><span class="fi check">✓</span> All Pro features unlocked</li>
-          <li><span class="fi check">✓</span> Commercial licence (1 domain)</li>
-          <li><span class="fi check">✓</span> Full MCQ bundles with solutions</li>
-          <li><span class="fi check">✓</span> Lifetime LMS access</li>
-          <li><span class="fi check">✓</span> 6 months priority support</li>
-          <li><span class="fi check">✓</span> Free minor updates</li>
-        </ul>
-        <a href="#products" class="btn btn--gold btn--full">Browse Pro Products</a>
-      </div>
-
-      <div class="plan plan--bundle" style="border-color:var(--cyan);">
-        <div class="plan__name">Mega Bundle</div>
-        <div class="plan__price" style="color:var(--cyan);"><sub>₹</sub>9,999</div>
-        <div class="plan__period">One-time · Everything unlocked</div>
-        <ul class="plan__features">
-          <li><span class="fi check">✓</span> All AI agents — Pro access</li>
-          <li><span class="fi check">✓</span> All MCQ bundles — all exams</li>
-          <li><span class="fi check">✓</span> All motion graphic packs</li>
-          <li><span class="fi check">✓</span> All LMS courses — lifetime access</li>
-          <li><span class="fi check">✓</span> All WordPress themes + plugins</li>
-          <li><span class="fi check">✓</span> 1 year priority support</li>
-          <li><span class="fi check">✓</span> Early access to new products</li>
-        </ul>
-        <a href="#" class="btn btn--primary btn--full" style="background:var(--cyan);color:#000;">Get Mega Bundle</a>
-      </div>
-
-    </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="section" id="faq">
+<section class="section section--alt" id="faq">
   <div class="container">
     <div class="section__header section__header--center">
       <h2>Frequently Asked Questions</h2>
-      <p>Everything you need before buying.</p>
+      <p>Everything you need to know before buying.</p>
     </div>
     <div class="faq">
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">What types of products does DGT Market sell?<span class="arr">+</span></button>
-        <div class="faq-a">DGT Market by Digitruinx sells: AI agents, AI workflows, WordPress themes and plugins, custom PHP websites, motion graphics (intros, transitions, lower thirds), MCQ bundles for competitive exams (UPSC, RRB, IBPS, SSC), LMS course access, and AI training materials. Everything is built by the team behind DGT Mint's 13 YouTube channels.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Are the Free versions really usable, or are they just demos?<span class="arr">+</span></button>
-        <div class="faq-a">All Free versions are fully functional for personal use. WordPress themes work on your real site, MCQ bundles give you real practice questions, motion graphics can be used in your videos, and AI agents run live. Pro versions unlock advanced features, remove limits, and add commercial licensing.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">How do I receive my purchase after paying?<span class="arr">+</span></button>
-        <div class="faq-a">Digital products (templates, MCQ PDFs, motion packs) are delivered instantly via download link to your email. AI agent access and LMS course access are activated within 30 minutes of payment. Custom PHP website builds are delivered within 24 hours with installation included.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Do you support Indian payment methods?<span class="arr">+</span></button>
-        <div class="faq-a">Yes. All payments go through Razorpay — UPI, PhonePe, Google Pay, debit/credit cards, net banking, and EMI are accepted. GST invoice available on request for business buyers.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">What is the Mega Bundle — is it worth it?<span class="arr">+</span></button>
-        <div class="faq-a">The Mega Bundle at ₹9,999 gives you Pro access to every product on DGT Market — all AI agents, all MCQ bundles, all motion packs, all LMS courses, and all WordPress themes/plugins. Individual Pro products total over ₹40,000 if bought separately. It includes 1 year priority support and early access to all new products.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)">Is this connected to DGT Mint's YouTube channels?<span class="arr">+</span></button>
-        <div class="faq-a">Yes. market.dgtmint.com is the digital product arm of DGT Mint, operated by Digitruinx Pvt Ltd — the same team behind 13 YouTube channels spanning tech, wealth, education, health, entertainment, and more. Every product is built from real-world experience running those channels.</div>
-      </div>
-
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Are the fonts and LUTs truly original — can I sell projects using them?<span class="arr">+</span></button><div class="faq-a">Yes. Every font is generated by Digitruinx's own pipeline — no cloning of existing typefaces. Every LUT is built from original colour matrix math. All are 100% Digitruinx IP. The Pro and Bundle licenses include full commercial use rights — you can use them in client work, products you sell, YouTube videos, ads, and more.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What is the difference between AI Agents and AI Workflows?<span class="arr">+</span></button><div class="faq-a">AI Agents are standalone tools you buy once — like a Content Writer Agent or a Research Agent. You own them permanently. AI Workflows are automated multi-step pipelines that run on a subscription: they connect multiple tools, schedule tasks, and run automatically. Agents = one-time purchase. Workflows = monthly subscription.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What video editing software do the LUTs and motion packs support?<span class="arr">+</span></button><div class="faq-a">LUTs are provided in .cube, .3dl, and .look formats — compatible with After Effects, DaVinci Resolve, Final Cut Pro, Premiere Pro, and Lightroom. Motion graphics packs include CapCut templates, After Effects .aep files, and DaVinci Resolve .drp files.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you accept UPI, PhonePe, and other Indian payment methods?<span class="arr">+</span></button><div class="faq-a">Yes. All payments go through Razorpay — UPI, PhonePe, Google Pay, debit/credit cards, net banking, and EMI are accepted. GST invoice available on request for business buyers.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Is there a refund policy?<span class="arr">+</span></button><div class="faq-a">We offer a 7-day refund on courses and templates if you haven't accessed more than 20% of the content. Digital downloads (fonts, LUTs, music) are non-refundable once downloaded. Agent and Workflow subscriptions can be cancelled anytime — no further charges.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Is this connected to DGT Mint's YouTube channels?<span class="arr">+</span></button><div class="faq-a">Yes. market.dgtmint.com is the digital product arm of DGT Mint, operated by Digitruinx Pvt Ltd — the same team behind 13 YouTube channels spanning tech, wealth, education, health, entertainment, and more.</div></div>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
-<section class="section section--alt">
+<section class="section">
   <div class="container">
     <div class="cta-banner">
       <h2>Start Building with DGT Market</h2>
-      <p>100+ digital products. Free entry on everything. Pro when you're ready. Made in India, for India.</p>
+      <p>500+ digital products. Free tier on everything. Pro when you're ready. Made in India, for India.</p>
       <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
         <a href="#products" class="btn btn--primary">Browse Free Products</a>
-        <a href="https://dgtmint.com/contact" class="btn btn--outline">Talk to the Team</a>
+        <a href="#" class="btn btn--ghost">Create Account</a>
       </div>
     </div>
   </div>
@@ -1135,7 +895,18 @@
     <div class="footer__inner">
       <div>
         <div class="footer__brand">DGT<span class="dot">.</span>Market</div>
-        <div class="footer__brand-desc">India's digital product marketplace by Digitruinx Pvt Ltd. AI agents, courses, graphics, themes and more — built by creators, for creators.</div>
+        <div class="footer__brand-desc">India's digital product marketplace by Digitruinx Pvt Ltd. Fonts, LUTs, music, AI agents, courses, themes and more — built by creators, for creators.</div>
+        <a href="https://dgtmint.com" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">Visit DGT Mint ↗</a>
+      </div>
+      <div>
+        <div class="footer__col-title">Creative Assets</div>
+        <ul class="footer__links">
+          <li><a href="#">Fonts</a></li>
+          <li><a href="#">LUTs</a></li>
+          <li><a href="#">Music</a></li>
+          <li><a href="#">Motion Graphics</a></li>
+          <li><a href="#">Web Templates</a></li>
+        </ul>
       </div>
       <div>
         <div class="footer__col-title">AI Products</div>
@@ -1143,16 +914,7 @@
           <li><a href="#">AI Agents</a></li>
           <li><a href="#">AI Workflows</a></li>
           <li><a href="#">AI Training</a></li>
-          <li><a href="#">Automation Kits</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer__col-title">Digital Media</div>
-        <ul class="footer__links">
-          <li><a href="#">Motion Graphics</a></li>
-          <li><a href="#">Intro Packs</a></li>
-          <li><a href="#">Transitions</a></li>
-          <li><a href="#">Lower Thirds</a></li>
+          <li><a href="#">WordPress &amp; Dev</a></li>
         </ul>
       </div>
       <div>
@@ -1167,16 +929,16 @@
       <div>
         <div class="footer__col-title">Company</div>
         <ul class="footer__links">
-          <li><a href="https://dgtmint.com">DGT Mint</a></li>
-          <li><a href="https://digitruinx.com">Digitruinx</a></li>
+          <li><a href="https://digitruinx.com">Digitruinx.com</a></li>
           <li><a href="#">Refund Policy</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Contact Us</a></li>
         </ul>
       </div>
     </div>
     <div class="footer__bottom">
       <p>© 2026 Digitruinx Pvt Ltd · market.dgtmint.com · All rights reserved</p>
-      <p>GST invoices available · Razorpay secured payments</p>
+      <p>GST invoices available · Secured by Razorpay</p>
     </div>
   </div>
 </footer>
@@ -1192,7 +954,6 @@
       });
     });
   });
-
   function toggleFaq(btn) {
     const item = btn.closest('.faq-item');
     const isOpen = item.classList.contains('open');
@@ -1200,6 +961,5 @@
     if (!isOpen) item.classList.add('open');
   }
 </script>
-
 </body>
 </html>
