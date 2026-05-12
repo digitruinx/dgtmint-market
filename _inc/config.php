@@ -9,3 +9,5 @@ define('SITE_NAME',  'DGT Market');
 define('ADMIN_EMAIL','connect@dgtmint.com');
 
 define('MKT_CONFIG', true);
+
+define('GA4_MEASUREMENT_ID', 'G-1W73VCQED2'); // GA4

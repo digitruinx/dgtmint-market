@@ -16,6 +16,17 @@ $_nav_initials = $_nav_user ? strtoupper(substr($_nav_user['name'],0,1)) : '';
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="<?= SITE_URL ?>/_assets/css/market.css" />
   <?php if (!empty($extra_head)) echo $extra_head; ?>
+
+  <!-- Google tag (gtag.js) — GA4 -->
+  <?php if (defined('GA4_MEASUREMENT_ID') && GA4_MEASUREMENT_ID): ?>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=<?= GA4_MEASUREMENT_ID ?>"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '<?= GA4_MEASUREMENT_ID ?>', { anonymize_ip: true });
+  </script>
+  <?php endif; ?>
 </head>
 <body>
 
