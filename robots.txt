@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Block private/admin areas
+Disallow: /_inc/
+Disallow: /account/
+Disallow: /checkout.php
+Disallow: /payment-verify.php
+Disallow: /setup.php
+Disallow: /logout.php
+
+Sitemap: https://dgtmint.market/sitemap.xml
